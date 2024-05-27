@@ -1,12 +1,24 @@
+import HOMECONTENT from "../../data/HOMECONTENT.json";
+import { createHomeContentTemplate } from "../templates/template-creator";
+
 const Home = {
   async render() {
     return `
-        <h1>Home</h1>
+        <div class="home-content-list"></div>
         `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const contents = await HOMECONTENT.contents;
+    const contentContainer = document.querySelector(".home-content-list");
+    contents.forEach((content, index) => {
+      const themeClass =
+        index % 2 === 0 ? "home-content-item-red" : "home-content-item-white";
+      contentContainer.innerHTML += createHomeContentTemplate(
+        content,
+        themeClass
+      );
+    });
   },
 };
 

@@ -1,0 +1,24 @@
+{
+  "contents": [
+    {
+      "title": "Selamat Datang di Donorin",
+      "description": "Kami adalah sebuah platform yang menghubungkan para pendonor darah  dengan individu dan organisasi yang membutuhkan. Kami bertujuan untuk  memudahkan proses donor darah dan membantu mereka yang memerlukan  dukungan.",
+      "button": "Tentang Kami"
+    },
+    {
+      "title": "Fakta Unik Donor Darah",
+      "description": "Tahukah kamu bahwa dengan mendonorkan darah, kita bisa mendapatkan banyak manfaat kesehatan, seperti meningkatkan produksi sel darah merah dan menurunkan risiko kanker? Selain itu, kita juga bisa membantu orang yang sedang membutuhkan.",
+      "button": "FAQ"
+    },
+    {
+      "title": "Yuk Donorkan Darahmu",
+      "description": "Bagi kamu yang merasa sehat dan tidak memiliki riwayat penyakit berat, kamu bisa berkontribusi dengan mendonorkan darah. Selain membuat tubuh lebih sehat, kamu juga bisa membantu orang lain yang sedang membutuhkan.",
+      "button": "Donor Sekarang"
+    },
+    {
+      "title": "Bagi Kamu Yang Butuh Pendonor",
+      "description": "Selain membantu para pendonor, kami juga mendukung para penerima donor, baik itu yayasan, rumah sakit, organisasi kesehatan, maupun perorangan yang membutuhkan.",
+      "button": "Ajukan Sekarang"
+    }
+  ]
+}

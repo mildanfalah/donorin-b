@@ -26,26 +26,32 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
+.login-button {
   font-weight: bold;
   font-size: 1.2rem;
   padding: 10px 20px;
   border-radius: 10px;
   color: $primary-color;
+  height: 100%;
 }
 
 .top-bar {
   background-color: $secondary-color;
   padding: 10px;
-  max-height: 75px;
+  max-height: 100px;
+  box-shadow: 0 2px 3px rgba($color: #000000, $alpha: 0.7);
+  position: sticky;
+  top: 0;
 
   .top-bar__container {
     display: flex;
     justify-content: space-between;
-    padding: 5px 25px;
+    align-items: center;
+    padding: 0px 25px;
 
     h1 {
       color: $text-color;
+      font-style: italic;
 
       span {
         color: $primary-color;
@@ -54,55 +60,51 @@ button {
   }
 }
 
-main {
-  margin: 30px 0 100px 0;
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+}
 
-  h1 {
-    display: flex;
-    justify-content: center;
-    margin: 15px auto;
-  }
+.donorin-list {
+  width: 90%;
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px;
+  margin: 30px auto 100px auto;
 
-  .donorin-list {
-    width: 90%;
-    display: grid;
-    justify-content: center;
-    grid-gap: 20px;
-    margin: 0 auto;
+  .user-card-container {
+    border: solid 1px #ececec;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px #000;
 
-    .user-card-container {
-      border: solid 1px #ececec;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 0 10px #000;
+    .user-card {
+      display: grid;
 
-      .user-card {
+      .user-card-image {
+        margin: 10px auto 15px auto;
+        border-radius: 50%;
+        border: solid 3px $primary-color;
+      }
+
+      .user-card-content {
         display: grid;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
 
-        .user-card-image {
-          margin: 10px auto 15px auto;
-          border-radius: 50%;
-          border: solid 3px $primary-color;
+        .user-card-name {
+          font-size: 2rem;
         }
 
-        .user-card-content {
-          display: grid;
-          justify-content: center;
-          text-align: center;
-          gap: 10px;
+        .user-card-email {
+          font-size: 1.2rem;
+        }
 
-          .user-card-name {
-            font-size: 2rem;
-          }
-
-          .user-card-email {
-            font-size: 1.2rem;
-          }
-
-          .user-card-blood {
-            font-weight: bold;
-            font-size: 1.5rem;
-          }
+        .user-card-blood {
+          font-weight: bold;
+          font-size: 1.5rem;
         }
       }
     }
@@ -117,6 +119,7 @@ main {
   bottom: 0;
   padding: 20px;
   border-radius: 15px 15px 0 0;
+  box-shadow: 0 -2px 3px rgba($color: #ffffff, $alpha: 0.7);
 
   ul {
     display: flex;

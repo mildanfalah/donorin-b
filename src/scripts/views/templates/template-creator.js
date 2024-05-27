@@ -13,4 +13,14 @@ const createUserItemTemplate = (user) => `
     </div>
 `;
 
-export { createUserItemTemplate };
+const createHomeContentTemplate = (content, themeClass) => `
+    <div class="${themeClass}">
+        <h2>${content.title}</h2>
+        <p>${content.description}</p>
+        <div class="home-content-button-container">
+            <button class="home-button">${content.button}</button>
+        </div>
+    </div>
+`;
+
+export { createUserItemTemplate, createHomeContentTemplate };
