@@ -13,12 +13,13 @@ const createUserItemTemplate = (user) => `
     </div>
 `;
 
-const createHomeContentTemplate = (content, themeClass) => `
+const createHomeContentTemplate = (content, themeClass, linkId) => `
     <div class="${themeClass}">
         <h2>${content.title}</h2>
         <p>${content.description}</p>
         <div class="home-content-button-container">
-            <button class="home-button">${content.button}</button>
+            <a href="#/${linkId}" class="home-button"><p>${content.button}</p></a>
+            <img src="${content.image}"/>
         </div>
     </div>
 `;

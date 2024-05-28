@@ -2,6 +2,8 @@ import "regenerator-runtime";
 import "../styles/style.scss";
 import "../styles/responsive.scss";
 import "../styles/home.scss";
+import "../styles/profile.scss";
+import "../styles/donorin.scss";
 import App from "./views/app";
 
 const app = new App({

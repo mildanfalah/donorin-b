@@ -20,8 +20,30 @@ $text-color: #fff;
 
     .home-content-button-container {
       display: flex;
-      justify-content: end;
-      margin: 70px auto 10px auto;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25%;
+      flex-direction: row-reverse;
+      margin: 20px 30px 0 30px;
+
+      a {
+        font-weight: bold;
+        min-width: 150px;
+        min-height: 50px;
+        font-size: 1rem;
+        border-radius: 10px;
+        background-color: #fff;
+        color: $primary-color;
+        box-shadow: 2px 2px 7px rgba($color: #000000, $alpha: 0.7);
+
+        p {
+          text-align: center;
+        }
+      }
+
+      img {
+        height: 150px;
+      }
     }
   }
 
@@ -39,15 +61,78 @@ $text-color: #fff;
     }
 
     .home-content-button-container {
-      margin: 70px auto 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15%;
+      margin: 20px 30px 0 30px;
+
+      a {
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: end;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: $text-color;
+        background-color: $primary-color;
+        min-width: 150px;
+        min-height: 50px;
+        box-shadow: 2px 2px 7px rgba($color: #000000, $alpha: 0.7);
+
+        p {
+          text-align: center;
+          margin: 5px auto 0 auto;
+        }
+      }
+
+      img {
+        height: 150px;
+      }
     }
   }
 }
 
-.home-button {
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: $primary-color;
+.bottom-content-container {
+  background-color: $primary-color;
+  padding: 20px;
+
+  .bottom-content-1 {
+    color: $text-color;
+    text-align: center;
+    margin: 30px auto;
+
+    h2 {
+      margin: 10px auto;
+    }
+  }
+  .bottom-content-2 {
+    color: $text-color;
+    text-align: center;
+    margin: 30px auto;
+    display: grid;
+
+    h2 {
+      margin: 10px auto;
+    }
+
+    a {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+  }
+  .bottom-content-3 {
+    color: $text-color;
+    text-align: center;
+    margin: 30px auto;
+    display: grid;
+
+    h2 {
+      margin: 10px auto;
+    }
+
+    a {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+  }
 }
