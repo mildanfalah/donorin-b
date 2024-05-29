@@ -8,7 +8,7 @@ const Home = {
         <div class ="bottom-content-container">
           <div class ="bottom-content-1">
             <h2>Donorin</h2>
-            <p>Hidup Sehat Dengan Memberi</p>
+            <p>Setetes Darah, Sejuta Harapan</p>
           </div>
           <div class ="bottom-content-2">
             <h2>Navigasi</h2>
