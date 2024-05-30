@@ -8,7 +8,7 @@ const Donorin = {
         <div class="top-content">
         <div class="search-bar">
           <input type="text" placeholder="Cari kota...">
-          <button type="submit">Cari</button>
+          <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </div>
         <div class="selection-content">
           <div class="tagline-content">
