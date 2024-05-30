@@ -1,4 +1,5 @@
 import DonorinDbSource from "../../data/donorindb-source";
+import selectButtonFunction from "../templates/donorin-filter";
 import { createUserItemTemplate } from "../templates/template-creator";
 
 const Donorin = {
@@ -22,14 +23,14 @@ const Donorin = {
             </div>
           </div>
           <p class="selection-question">Apakah anda?</p>
-          <div class="selection-button">
-            <a class="pendonor-button" href="#">Pendonor</a>
-            <a class="penerima-button" href="#">Penerima</a>
+          <div class="selection-button-container">
+            <p id="pendonor" class="selection-button pendonor-button button-selected">Pendonor</p>
+            <p id="penerima" class="selection-button penerima-button">Penerima</p>
           </div>
-          <div class="description-bar">
+          <div id="pendonorDescription" class="description-bar show">
             <p>Halaman pendonor untuk menampilkan penerima donor</p>
           </div>
-        <div class="description-bar">
+        <div id="penerimaDescription" class="description-bar">
           <p>Halaman penerima donor untuk menampilkan pendonor</p>
         </div>
       </div>
@@ -45,6 +46,8 @@ const Donorin = {
     users.forEach((user) => {
       usersContainer.innerHTML += createUserItemTemplate(user);
     });
+
+    selectButtonFunction();
   },
 };
 
