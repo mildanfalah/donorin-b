@@ -80,13 +80,22 @@ h1 {
 
   ul {
     display: flex;
-    gap: 15%;
     padding: 0;
+    text-align: center;
 
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
-    i {
-      font-size: 1.5rem;
+    li {
+      padding: 0 10px;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .nav-active {
+      border-bottom: 3px solid #fff;
     }
   }
 }

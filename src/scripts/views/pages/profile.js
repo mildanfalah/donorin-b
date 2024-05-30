@@ -1,3 +1,5 @@
+import navButtonFunction from "../templates/home-nav";
+
 const Profile = {
   async render() {
     return `
@@ -7,6 +9,7 @@ const Profile = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    navButtonFunction();
   },
 };
 

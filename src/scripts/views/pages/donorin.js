@@ -1,5 +1,7 @@
 import DonorinDbSource from "../../data/donorindb-source";
 import selectButtonFunction from "../templates/donorin-filter";
+import navButtonFunction from "../templates/home-nav";
+navButtonFunction;
 import { createUserItemTemplate } from "../templates/template-creator";
 
 const Donorin = {
@@ -48,6 +50,7 @@ const Donorin = {
     });
 
     selectButtonFunction();
+    navButtonFunction();
   },
 };
 
