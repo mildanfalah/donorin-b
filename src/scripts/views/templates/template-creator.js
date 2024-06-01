@@ -30,4 +30,68 @@ const createHomeContentTemplate = (content, themeClass, linkId) => `
     </div>
 `;
 
-export { createUserItemTemplate, createHomeContentTemplate };
+const createProfileHistoryPendonor = () => `
+    <div class="history-card">
+        <div class="history-card-head">
+            <div class="history-id">
+                <p>Riwayat ID</p>
+                <p>ID 03049</p>
+            </div>
+            <div class="history-date">
+                <p>Tanggal Permintaan</p>
+                <p>30 Mei 2024</p>
+            </div>
+        </div>
+        <div class="history-card-body-container">
+            <p>Yudi Ari Nugroho</p>
+            <div class="history-card-body-content">
+                <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> AB-</p>
+                <p>Tanggal Donor: 23-03-2024</p>
+            </div>
+            <div class="history-card-body-content">
+                <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
+                <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
+            </div>
+        </div>
+        <div class="history-card-body-container">
+            <p>Yudi Ari Nugroho</p>
+            <div class="history-card-body-content">
+                <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> AB-</p>
+                <p>Tanggal Donor: 23-03-2024</p>
+            </div>
+            <div class="history-card-body-content">
+                <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
+                <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
+            </div>
+        </div>
+        
+    </div>
+`;
+
+const createProfileHistoryPenerima = () => `
+    <div class="history-card-penerima-container">
+        <div class="history-card-penerima-wrapper">
+            <div class="history-card-head">
+                <p>Riwayat ID Penerima</p>
+                <p>ID 039050</p>
+            </div>
+            <div class="history-card-body">
+                <p>Budi Herdi</p>
+                <div class="history-card-body-content">
+                    <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> A-</p>
+                    <p>Tanggal Donor: 25-03-2024</p>
+                </div>
+                <div class="history-card-body-content">
+                    <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
+                    <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+export {
+  createUserItemTemplate,
+  createHomeContentTemplate,
+  createProfileHistoryPendonor,
+  createProfileHistoryPenerima,
+};

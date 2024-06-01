@@ -1,0 +1,153 @@
+$primary-color: #cd2c4e;
+$secondary-color: #242424;
+$text-color: #fff;
+
+.profile-container {
+  display: grid;
+  width: 80%;
+  gap: 10px;
+  margin: 30px auto;
+
+  .profile-edit-bar {
+    background-color: $primary-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+
+    p {
+      color: $text-color;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    button {
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0 30px;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+
+  .profile-image {
+    .profile-image-clip {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      clip-path: circle(50% at 50% 50%);
+      border: 4px solid $primary-color;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+
+  .profile-info {
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f4f4f4;
+  }
+
+  .history-container {
+    .history-title {
+      background-color: $primary-color;
+      border-radius: 10px;
+      padding: 10px;
+      color: $text-color;
+      margin: 20px auto 10px auto;
+      text-align: center;
+    }
+  }
+
+  .history-card {
+    background-color: $primary-color;
+    padding: 15px;
+    color: $text-color;
+    border-radius: 10px;
+
+    .history-card-head {
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .history-card-body-container {
+      color: #000000;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 0 0 10px 0;
+      font-weight: bold;
+      text-align: center;
+
+      .history-card-body-content {
+        background-color: #ececec;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        border-radius: 10px;
+
+        p {
+          font-size: 0.9rem;
+          i {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .history-card-penerima-container {
+    background-color: $primary-color;
+    padding: 10px;
+    border-radius: 10px;
+
+    .history-card-penerima-wrapper {
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+
+      .history-card-head {
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 0 auto 10px 0;
+        color: $text-color;
+        font-weight: bold;
+      }
+
+      .history-card-body {
+        .history-card-body-content {
+          display: flex;
+          justify-content: space-between;
+          background-color: #ececec;
+          margin: 10px auto;
+          padding: 5px;
+          border-radius: 10px;
+
+          p {
+            font-size: 0.9rem;
+            i {
+              font-weight: bold;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
