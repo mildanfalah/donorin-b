@@ -3,6 +3,10 @@ $secondary-color: #242424;
 $text-color: #fff;
 
 @media (min-width: 600px) {
+  .top-bar__container {
+    width: 80% !important;
+  }
+
   .home-content-body {
     width: 80%;
     margin: 0 auto;
@@ -16,9 +20,19 @@ $text-color: #fff;
 
   .bottom-content-container {
     display: flex;
+    text-align: start !important;
 
     .bottom-content-2 {
-      width: 40%;
+      h2 {
+        width: 100% !important;
+        margin: 0 0 0 20px !important;
+      }
+    }
+
+    .bottom-content-3 {
+      h2 {
+        margin: 0 0 0 20px !important;
+      }
     }
   }
 }
@@ -60,5 +74,22 @@ $text-color: #fff;
       border: 3px solid #fff;
       border-radius: 0 10px 10px 0;
     }
+  }
+
+  .top-content-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .donorin-list {
+    width: 80% !important;
+  }
+
+  .profile-container {
+    width: 70% !important;
+  }
+
+  footer {
+    padding-bottom: 20px;
   }
 }

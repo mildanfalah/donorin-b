@@ -137,8 +137,8 @@ $text-color: #fff;
   width: 90%;
   display: grid;
   justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
   margin: 30px auto 100px auto;
 
   .user-card-container {
@@ -167,9 +167,9 @@ $text-color: #fff;
 
       .user-card-content {
         display: grid;
-        justify-content: center;
         text-align: center;
         gap: 10px;
+        width: 100%;
 
         .user-card-name {
           font-size: 1rem;
@@ -183,7 +183,7 @@ $text-color: #fff;
           padding: 5px;
           background-color: #ececec;
           border-radius: 10px;
-          width: 160px;
+          width: 100%;
 
           .user-card-address {
             font-size: 0.9rem;
