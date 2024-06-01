@@ -21,11 +21,13 @@ const createUserItemTemplate = (user) => `
 
 const createHomeContentTemplate = (content, themeClass, linkId) => `
     <div class="${themeClass}">
-        <h2>${content.title}</h2>
-        <p>${content.description}</p>
-        <div class="home-content-button-container">
-            <a href="#/${linkId}" class="home-button"><p>${content.button}</p></a>
-            <img src="${content.image}"/>
+        <div class="home-content-body">
+            <h2>${content.title}</h2>
+            <p>${content.description}</p>
+            <div class="home-content-button-container">
+                <a href="#/${linkId}" class="home-button"><p>${content.button}</p></a>
+                <img src="${content.image}"/>
+            </div>        
         </div>
     </div>
 `;
