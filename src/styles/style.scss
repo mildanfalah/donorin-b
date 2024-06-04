@@ -19,7 +19,8 @@ img {
 }
 
 body {
-  min-height: 100vh;
+  // min-height: 100vh;
+  overflow-x: hidden;
   display: grid;
   // grid-template-rows: auto auto auto;
   margin: 0;

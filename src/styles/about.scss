@@ -1,0 +1,182 @@
+$primary-color: #cd2c4e;
+$secondary-color: #242424;
+$text-color: #fff;
+
+.wrapper-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $text-color;
+
+    .wrapper-header {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: 
+        $primary-color;
+        color: $text-color;
+    }
+    .profile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow-x: hidden;
+
+        .card {
+            height: 400px;
+            background-color: #cd2c4e;
+            margin: 20px 0;
+            
+            
+        }
+        .card-right {
+            position: relative;
+            left: 50%;
+            width: 100vw;
+
+            #card-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background-color: $secondary-color;
+                right: 100%;
+                transform: translateX(50%);
+                border-radius: 20px 20px 20px 20px;
+                box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    border: solid 3px $primary-color;
+                }
+
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    h3 {
+                        background-color: $text-color;
+                        padding: 5px 20px;
+                        border-radius: 20px;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+        .card-left {
+            display: flex;
+            width: 100vw;
+            position: relative;
+            right: 50%;
+            justify-content: end;
+            border-radius: 0px 20px 20px 0;
+            
+
+            #card-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background-color: $secondary-color;
+                left: 100%;
+                transform: translateX(-50%);
+                border-radius: 20px 20px 20px 20px;
+                box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -5px 5px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    border: solid 3px $primary-color;
+                }
+
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    h3 {
+                        background-color: $text-color;
+                        padding: 5px 20px;
+                        border-radius: 20px;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrapper-faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $text-color;
+
+    .wrapper-header {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        color: $text-color;
+    }
+
+    .main-faq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        }
+    .faq {
+        margin: 20px;
+        width: 600px;
+        height: 100px;
+        padding: 20px;
+        box-shadow: 3px 3px 0px 7px rgba(205,44,78,1);
+-webkit-box-shadow: 3px 3px 0px 7px rgba(205,44,78,1);
+-moz-box-shadow: 3px 3px 0px 7px rgba(205,44,78,1);
+        
+        ul li {
+            list-style: disc;
+            color: #242424;
+
+        }
+        .ask {
+            margin-bottom: 10px;
+        }
+    }
+}
