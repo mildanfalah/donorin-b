@@ -1,7 +1,20 @@
 const Profile = {
   async render() {
     return `
-          <h1>Profile</h1>
+          <div class="wrapper-profile">
+
+          <div class="profile-header">
+          <div class="wrapper-header">
+          <h1>Profil</h1>
+          </div>
+          <button type="button" id="profile-edit">Edit</button>
+          </div>
+
+          <div class="profile-img">
+          <img src="./images/avatar-3.jpg">
+          </div>
+
+          </div>
           `;
   },
 

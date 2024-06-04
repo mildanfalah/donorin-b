@@ -1,0 +1,53 @@
+$primary-color: #cd2c4e;
+$secondary-color: #242424;
+$text-color: #fff;
+
+.wrapper-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // background-color: orange;
+
+    .profile-header {
+        margin: 20px 50px;
+        border-radius: 20px;
+        width: 1000px;
+        padding: 0 15px;
+        background-color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .wrapper-header h1 {
+            width: 150px;
+            color: $text-color;
+        }
+
+        button {
+            border-radius: 10px;
+            height: 40px;
+            width: 130px;
+            border: none;
+            font-size: 20px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+    }
+
+    .profile-img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    }
+}
