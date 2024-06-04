@@ -6,12 +6,12 @@ const createUserItemTemplate = (user) => `
             <div class="user-card-status">
                 <p>Pendonor</p>
             </div>
-            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${user.id}" alt="${user.firstName} ${user.lastName}"/>
+            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${user.id}" alt="${user.nama}"/>
             <div class="user-card-content">
-                <h2 class="user-card-name">${user.firstName} ${user.lastName}</h2>
+                <h2 class="user-card-name">${user.nama}</h2>
                 <div class="user-card-info">
-                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${user.bloodGroup}</p>
-                    <p class="user-card-adress"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${user.address.city}</p>
+                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${user.status}</p>
+                    <p class="user-card-adress"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${user.email}</p>
                 </div>
                 <button type="submit">Ajukan</button>
             </div>

@@ -47,6 +47,7 @@ const Donorin = {
   async afterRender() {
     const users = await DonorinDbSource.donorinData();
     const usersContainer = document.querySelector(".donorin-list");
+    console.log(users);
     users.forEach((user) => {
       usersContainer.innerHTML += createUserItemTemplate(user);
     });
