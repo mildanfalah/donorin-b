@@ -95,10 +95,10 @@ $text-color: #fff;
 .bottom-content-container {
   background-color: $primary-color;
   padding: 20px;
+  text-align: center;
 
   .bottom-content-1 {
     color: $text-color;
-    text-align: center;
     margin: 30px auto;
 
     h2 {
@@ -107,22 +107,21 @@ $text-color: #fff;
   }
   .bottom-content-2 {
     color: $text-color;
-    text-align: center;
     margin: 30px auto;
     display: grid;
 
     h2 {
       margin: 10px auto;
+      width: 50%;
     }
 
     a {
-      margin-bottom: 30px;
       font-size: 1.1rem;
+      padding: 20px;
     }
   }
   .bottom-content-3 {
     color: $text-color;
-    text-align: center;
     margin: 30px auto;
     display: grid;
 
@@ -131,7 +130,7 @@ $text-color: #fff;
     }
 
     a {
-      margin-bottom: 30px;
+      padding: 20px;
       font-size: 1.1rem;
     }
   }

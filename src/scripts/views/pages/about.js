@@ -1,3 +1,5 @@
+import navButtonFunction from "../templates/home-nav";
+
 const About = {
   async render() {
     return `
@@ -119,6 +121,7 @@ const About = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    navButtonFunction();
   },
 };
 

@@ -1,4 +1,5 @@
 import HOMECONTENT from "../../data/HOMECONTENT.json";
+import navButtonFunction from "../templates/home-nav";
 import { createHomeContentTemplate } from "../templates/template-creator";
 
 const Home = {
@@ -11,11 +12,11 @@ const Home = {
             <p>Setetes Darah, Sejuta Harapan</p>
           </div>
           <div class ="bottom-content-2">
-            <h2>Navigasi</h2>
-            <a href="#/">Home</a>
-            <a href="#/donorin">Donorin</a>
-            <a href="#/profile">Profile</a>
-            <a href="#/about">About Us</a>
+            <h2>Tech Stack</h2>
+            <a href="#/">Javascript</a>
+            <a href="#/">Sass</a>
+            <a href="#/">Express.JS</a>
+            <a href="#/">MySQL</a>
           </div>
           <div class ="bottom-content-3">
             <h2>Kontak</h2>
@@ -40,6 +41,8 @@ const Home = {
         linkId
       );
     });
+
+    navButtonFunction();
   },
 };
 

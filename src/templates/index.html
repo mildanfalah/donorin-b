@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Peduli sesama dengan donorin" />
     <link rel="icon" href="./favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9e2c6746bb.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Donorin</title>
   </head>
   <body>
@@ -19,16 +29,34 @@
 
     <main id="mainContent"></main>
 
-    <div>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#/donorin">Donorin</a></li>
-          <li><a href="#/profile">Profile</a></li>
-          <li><a href="#/about">About Us</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li class="nav-button" data-page="home">
+          <a href="/"
+            ><i class="fa-solid fa-house" style="color: #ffffff"></i>
+            <p class="text-menu">Home</p>
+          </a>
+        </li>
+        <li class="nav-button" data-page="donorin">
+          <a href="#/donorin"
+            ><i class="fa-solid fa-droplet" style="color: #ffffff"></i>
+            <p class="text-menu">Donorin</p>
+          </a>
+        </li>
+        <li class="nav-button" data-page="profile">
+          <a href="#/profile"
+            ><i class="fa-solid fa-user" style="color: #ffffff"></i>
+            <p class="text-menu">Profile</p>
+          </a>
+        </li>
+        <li class="nav-button" data-page="about">
+          <a href="#/about"
+            ><i class="fa-solid fa-circle-info" style="color: #ffffff"></i>
+            <p class="text-menu">About Us</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <footer>
       <p>Copyright &copy; 2024 - Donorin. All Right Reserved</p>
