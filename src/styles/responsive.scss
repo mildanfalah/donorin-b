@@ -150,7 +150,28 @@ $text-color: #fff;
       margin: 0;
 
       li {
-        padding: 15px;
+        display: flex;
+        width: 100px;
+        height:80px;
+        justify-content: center;
+        align-items: center;
+        transition: .2s ease-in-out;
+
+        a {
+          color: $text-color;
+        }
+      }
+      li:hover {
+        background-color: $text-color;
+        border-radius: 0 10px 10px 0;
+        
+        a {
+          color: $primary-color;
+          transition: .2s ease-in-out;
+        }
+        a:hover {
+          scale: 1.2;
+        }
       }
     }
 
