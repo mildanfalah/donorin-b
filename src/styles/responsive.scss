@@ -3,6 +3,48 @@ $secondary-color: #242424;
 $text-color: #fff;
 
 @media (min-width: 600px) {
+  .wrapper-about-us {
+    .wrapper-header {
+      height: 70px;
+    }
+    .profile {
+      .card {
+        height: 300px;
+      }
+      .card-right {
+        #card-content {
+          width: 300px;
+          height: 300px;
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+      .card-left {
+        #card-content {
+          width: 300px;
+          height: 300px;
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-faq {
+    .wrapper-header {
+      height: 70px;
+    }
+    .faq {
+      width: 450px;
+      height: 110px;
+    }
+  }
   .top-bar__container {
     width: 80% !important;
   }
@@ -38,6 +80,48 @@ $text-color: #fff;
 }
 
 @media (min-width: 1000px) {
+  .wrapper-about-us {
+    .wrapper-header {
+      height: 80px;
+    }
+    .profile {
+      .card {
+        height: 400px;
+      }
+      .card-right {
+        #card-content {
+          width: 400px;
+          height: 400px;
+
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+      .card-left {
+        #card-content {
+          width: 400px;
+          height: 400px;
+
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-faq {
+    .wrapper-header {
+      height: 70px;
+    }
+    .faq {
+      width: 500px;
+      height: 110px;
+    }
+  }
   .home-content-body {
     width: 60%;
     margin: 0 auto;
