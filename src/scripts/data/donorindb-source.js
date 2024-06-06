@@ -11,6 +11,17 @@ class DonorinDbSource {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     return response.json();
   }
+
+  static async transactionData() {
+    const response = await fetch(API_ENDPOINT.TRANSACTIONS);
+    const responseJson = await response.json();
+    return responseJson.data;
+  }
+
+  static async transactionDetail(id) {
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    return response.json();
+  }
 }
 
 export default DonorinDbSource;

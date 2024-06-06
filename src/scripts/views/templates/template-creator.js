@@ -29,6 +29,29 @@ const createUserItemTemplate = (user) => `
     </div>
 `;
 
+const createUserTransactionTemplate = (user) => `
+    <div class="user-card-container">
+        <div class="user-card">
+            <div class="user-card-status">
+                <p id="userStatus">Penerima</p>
+            </div>
+            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${user.id}" alt="${user.nama_pemohon}"/>
+            <div class="user-card-content">
+                <h2 class="user-card-name">${user.nama_pemohon}</h2>
+                <div class="user-card-info-2">
+                    <p class="user-card-date"><i class="fa-solid fa-calendar" style="color: #cd2c4e;"></i> ${user.tanggal_dibutuhkan}</p>
+                    <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${user.lokasi}</p>
+                </div>
+                <div class="user-card-info">
+                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${user.gol_darah_dibutuhkan}</p>
+                    <p class="user-card-blood-needed"><i class="fa-solid fa-syringe" style="color: #cd2c4e;"></i> ${user.jumlah_mililiter}ml</p>
+                </div>
+                <button type="submit">Kontribusi</button>
+            </div>
+        </div>
+    </div>
+`;
+
 const createHomeContentTemplate = (content, themeClass, linkId) => `
     <div class="${themeClass}">
         <div class="home-content-body">
@@ -103,6 +126,7 @@ const createProfileHistoryPenerima = () => `
 
 export {
   createUserItemTemplate,
+  createUserTransactionTemplate,
   createHomeContentTemplate,
   createProfileHistoryPendonor,
   createProfileHistoryPenerima,

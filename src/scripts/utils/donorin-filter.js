@@ -14,7 +14,7 @@ const selectButtonFunction = () => {
     if (this.id === "penerimaButton") {
       showActiveDonors();
     } else if (this.id === "pendonorButton") {
-      hideAllUsers();
+      hidePendonorUsers();
     }
   }
 
@@ -41,9 +41,14 @@ const selectButtonFunction = () => {
     });
   }
 
-  function hideAllUsers() {
+  function hidePendonorUsers() {
     userCards.forEach((card) => {
-      card.classList.add("hidden");
+      const userStatus = card.querySelector("#userStatus").textContent;
+      if (userStatus === "Penerima") {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
     });
   }
 

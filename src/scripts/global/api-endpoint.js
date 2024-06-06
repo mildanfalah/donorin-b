@@ -3,6 +3,7 @@ import CONFIG from "./config";
 const API_ENDPOINT = {
   HOME: `${CONFIG.BASE_URL}home`,
   DONORIN: `${CONFIG.BASE_URL}users`,
+  TRANSACTIONS: `${CONFIG.BASE_URL}transactions`,
   PROFILE: `${CONFIG.BASE_URL}profile`,
   DETAIL: (id) => `${CONFIG.BASE_URL}users/${id}`,
   ABOUT: `${CONFIG.BASE_URL}about`,

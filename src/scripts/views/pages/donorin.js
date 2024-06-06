@@ -2,7 +2,10 @@ import DonorinDbSource from "../../data/donorindb-source";
 import selectButtonFunction from "../../utils/donorin-filter";
 import searchFunction from "../../utils/donorin-search";
 import navButtonFunction from "../../utils/home-nav";
-import { createUserItemTemplate } from "../templates/template-creator";
+import {
+  createUserItemTemplate,
+  createUserTransactionTemplate,
+} from "../templates/template-creator";
 
 const Donorin = {
   async render() {
@@ -46,9 +49,13 @@ const Donorin = {
 
   async afterRender() {
     const users = await DonorinDbSource.donorinData();
+    const userTransactions = await DonorinDbSource.transactionData();
     const usersContainer = document.querySelector(".donorin-list");
     users.forEach((user) => {
       usersContainer.innerHTML += createUserItemTemplate(user);
+    });
+    userTransactions.forEach((user) => {
+      usersContainer.innerHTML += createUserTransactionTemplate(user);
     });
 
     selectButtonFunction();
