@@ -1,5 +1,5 @@
 import HOMECONTENT from "../../data/HOMECONTENT.json";
-import navButtonFunction from "../templates/home-nav";
+import navButtonFunction from "../../utils/home-nav";
 import { createHomeContentTemplate } from "../templates/template-creator";
 
 const Home = {

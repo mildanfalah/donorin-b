@@ -27,6 +27,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.no-data {
+  padding: 0 20px 100px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .login-button {
   font-weight: bold;
   font-size: 1.2rem;

@@ -1,4 +1,4 @@
-import navButtonFunction from "../templates/home-nav";
+import navButtonFunction from "../../utils/home-nav";
 import {
   createProfileHistoryPendonor,
   createProfileHistoryPenerima,

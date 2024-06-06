@@ -1,4 +1,4 @@
-import navButtonFunction from "../templates/home-nav";
+import navButtonFunction from "../../utils/home-nav";
 
 const About = {
   async render() {
@@ -75,12 +75,12 @@ const About = {
           
           <div class="ask">
           <ul>
-          <li>apakah aplikasi ini berdampak?</li>
+          <li>Apakah aplikasi ini berdampak?</li>
           </ul>
           </div>
 
           <div class="answer">
-          <p>iya, dengan adanya aplikasi donorin kita dapat saling membantu dalam hal pendonoran darah</p>
+          <p>Iya, dengan adanya aplikasi donorin kita dapat saling membantu dalam hal pendonoran darah</p>
           </div>
 
           </div>
@@ -89,12 +89,12 @@ const About = {
           
           <div class="ask">
           <ul>
-          <li>bagaimana cara registrasi?</li>
+          <li>Bagaimana cara registrasi?</li>
           </ul>
           </div>
 
           <div class="answer">
-          <p>pengguna dapat mendaftarkan diri menggunakan alamat email dan NIK</p>
+          <p>Pengguna dapat mendaftarkan diri menggunakan alamat email dan NIK</p>
           </div>
 
           </div>
@@ -103,12 +103,12 @@ const About = {
 
           <div class="ask">
           <ul>
-          <li>etika penggunaan aplikasi?</li>
+          <li>Etika penggunaan aplikasi?</li>
           </ul>
           </div>
 
           <div class="answer">
-          <p>tidak diperkenankan untuk menyebarkan informasi pribadi pengguna lain dalam bentuk apapun, </p>
+          <p>Tidak diperkenankan untuk menyebarkan informasi pribadi pengguna lain dalam bentuk apapun, </p>
           </div>
 
           </div>

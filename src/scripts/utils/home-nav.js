@@ -1,4 +1,4 @@
-import UrlParser from "../../routes/url-parser";
+import UrlParser from "../routes/url-parser";
 
 const navButtonFunction = () => {
   const navButtons = document.querySelectorAll(".nav-button");
