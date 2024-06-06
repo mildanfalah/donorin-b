@@ -29,8 +29,8 @@ const Donorin = {
               </div>
               <p class="selection-question">Apakah anda?</p>
               <div class="selection-button-container">
-                <p id="pendonorButton" class="selection-button pendonor-button">Pendonor</p>
-                <p id="penerimaButton" class="selection-button penerima-button button-selected">Penerima</p>
+                <p id="pendonorButton" class="selection-button pendonor-button button-selected">Pendonor</p>
+                <p id="penerimaButton" class="selection-button penerima-button">Penerima</p>
               </div>
               <div id="pendonorButtonDescription" class="description-bar show">
                 <p>Halaman pendonor untuk menampilkan penerima donor</p>
@@ -43,7 +43,12 @@ const Donorin = {
         </div>
 
         <div class="donorin-list"></div>
-        <div class="no-data"><div>
+        <div class="no-data"></div>
+        <div class="floating-button">
+          <button>
+            <i class="fa-solid fa-plus" style="color: #cd2c4e;"></i>
+            </button>
+        </div>
           `;
   },
 

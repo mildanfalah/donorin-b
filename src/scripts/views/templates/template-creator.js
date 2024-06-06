@@ -35,16 +35,30 @@ const createUserTransactionTemplate = (user) => `
             <div class="user-card-status">
                 <p id="userStatus">Penerima</p>
             </div>
-            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${user.id}" alt="${user.nama_pemohon}"/>
+            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${
+  user.id
+}" alt="${user.nama_pemohon}"/>
             <div class="user-card-content">
                 <h2 class="user-card-name">${user.nama_pemohon}</h2>
                 <div class="user-card-info-2">
-                    <p class="user-card-date"><i class="fa-solid fa-calendar" style="color: #cd2c4e;"></i> ${user.tanggal_dibutuhkan}</p>
-                    <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${user.lokasi}</p>
+                    <p class="user-card-date"><i class="fa-solid fa-calendar" style="color: #cd2c4e;"></i> ${new Date(
+                      user.tanggal_dibutuhkan
+                    ).toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}</p>
+                    <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
+                      user.lokasi
+                    }</p>
                 </div>
                 <div class="user-card-info">
-                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${user.gol_darah_dibutuhkan}</p>
-                    <p class="user-card-blood-needed"><i class="fa-solid fa-syringe" style="color: #cd2c4e;"></i> ${user.jumlah_mililiter}ml</p>
+                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
+                      user.gol_darah_dibutuhkan
+                    }</p>
+                    <p class="user-card-blood-needed"><i class="fa-solid fa-syringe" style="color: #cd2c4e;"></i> ${
+                      user.jumlah_mililiter
+                    }ml</p>
                 </div>
                 <button type="submit">Kontribusi</button>
             </div>
