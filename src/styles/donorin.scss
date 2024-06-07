@@ -2,16 +2,23 @@ $primary-color: #cd2c4e;
 $secondary-color: #242424;
 $text-color: #fff;
 
+.top-content-wrapper {
+  width: 90%;
+  margin: 5px auto;
+}
 .top-content {
+  position: relative;
   background-color: $primary-color;
   padding: 15px 0 20px 0;
-  border-bottom-right-radius: 10%;
-  border-bottom-left-radius: 10%;
-  position: sticky;
+  // border-bottom-right-radius: 10%;
+  // border-bottom-left-radius: 10%;
+  border-radius: 0 0 20px 20px;
+  // position: sticky;
   top: 0;
 
   .search-bar {
-    width: 80%;
+    top: 0;
+    width: 100%;
     margin: 5px auto 0 auto;
     display: flex;
     justify-content: center;
@@ -38,8 +45,9 @@ $text-color: #fff;
   }
 
   .selection-content {
-    width: 80%;
-    margin: 10px auto;
+    width: 100%;
+    // margin: 10px auto;
+    margin-top: 10px;
 
     .tagline-content {
       background-color: #fff;
@@ -144,22 +152,29 @@ $text-color: #fff;
   .user-card-container {
     border: solid 1px #ececec;
     border-radius: 10px;
+    background-color: $text-color;
     padding: 10px;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 5px #000;
 
     .user-card {
       display: grid;
+      
 
       .user-card-status {
         background-color: $primary-color;
         padding: 5px;
         color: $text-color;
-        border-radius: 10px;
+        border-radius: 7px;
         text-align: center;
+          p {
+            text-align: start;
+            padding-left: 10px;
+          }
       }
 
+
       .user-card-image {
-        width: 50px;
+        width: 80px;
         margin: 10px auto 15px auto;
         border-radius: 50%;
         border: solid 3px $primary-color;
@@ -168,7 +183,7 @@ $text-color: #fff;
       .user-card-content {
         display: grid;
         text-align: center;
-        gap: 10px;
+        gap: 5px;
         width: 100%;
 
         .user-card-name {
@@ -196,7 +211,7 @@ $text-color: #fff;
           margin: 0;
           padding: 5px;
           background-color: #ececec;
-          border-radius: 10px;
+          border-radius: 5px;
           width: 100%;
 
           .user-card-address {
@@ -212,11 +227,15 @@ $text-color: #fff;
         button {
           background-color: $primary-color;
           color: #fff;
-          width: 70%;
+          width: 90%;
           margin: 10px auto;
           padding: 7px;
           border: none;
-          border-radius: 10px;
+          font-weight: 500;
+          border-radius: 5px;
+        }
+        button:hover {
+          background-color:#86132c;
         }
       }
     }
