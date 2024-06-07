@@ -80,6 +80,17 @@ $text-color: #fff;
 }
 
 @media (min-width: 1000px) {
+  .donorin-list {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+  .history-container {
+    display: flex;
+    gap: 20px;
+    .penerima-history,
+    .pendonor-history {
+      flex-basis: 50%;
+    }
+  }
   .wrapper-about-us {
     .wrapper-header {
       height: 80px;
@@ -97,6 +108,14 @@ $text-color: #fff;
             width: 200px;
             height: 200px;
           }
+          .desc {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
         }
       }
       .card-left {
@@ -107,6 +126,14 @@ $text-color: #fff;
           img {
             width: 200px;
             height: 200px;
+          }
+          .desc {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -152,10 +179,10 @@ $text-color: #fff;
       li {
         display: flex;
         width: 100px;
-        height:80px;
+        height: 80px;
         justify-content: center;
         align-items: center;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
 
         a {
           color: $text-color;
@@ -164,10 +191,10 @@ $text-color: #fff;
       li:hover {
         background-color: $text-color;
         border-radius: 0 10px 10px 0;
-        
+
         a {
           color: $primary-color;
-          transition: .2s ease-in-out;
+          transition: 0.2s ease-in-out;
         }
         a:hover {
           scale: 1.2;
