@@ -23,7 +23,9 @@ const createUserItemTemplate = (user) => `
                       user.lokasi
                     }</p>
                 </div>
-                <button type="submit">Ajukan</button>
+                <button id="submitButton" data-user-id="${
+                  user.id
+                }">Ajukan</button>
             </div>
         </div>
     </div>
@@ -99,6 +101,36 @@ const populateModal = (user) => `
                       user.jumlah_mililiter
                     }ml</p>
                 </div>
+            </div>
+        </div>
+    </div>
+`;
+const populateModalSubmit = (user) => `
+    <div class="user-card-container ${
+      user.status_donor === "inactive" ? "hidden" : ""
+    }">
+        <div class="user-card">
+            <div class="user-card-status">
+                <p id="userStatus">${
+                  user.status_donor === "active" ? "Pendonor" : "inactive"
+                }</p>
+            </div>
+            <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${
+  user.id
+}" alt="${user.nama}"/>
+            <div class="user-card-content">
+                <h2 class="user-card-name">${user.nama}</h2>
+                <div class="user-card-info">
+                    <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
+                      user.gol_darah
+                    }</p>
+                    <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
+                      user.lokasi
+                    }</p>
+                </div>
+                <button id="submitButton" data-user-id="${
+                  user.id
+                }">Ajukan</button>
             </div>
         </div>
     </div>
@@ -183,4 +215,5 @@ export {
   createProfileHistoryPendonor,
   createProfileHistoryPenerima,
   populateModal,
+  populateModalSubmit,
 };

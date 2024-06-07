@@ -2,6 +2,7 @@ import DonorinDbSource from "../../data/donorindb-source";
 import contributeButtonFunction from "../../utils/donorin-contribute-detail";
 import selectButtonFunction from "../../utils/donorin-filter";
 import searchFunction from "../../utils/donorin-search";
+import submitButtonFunction from "../../utils/donorin-submit-detail";
 import navButtonFunction from "../../utils/home-nav";
 import {
   createUserItemTemplate,
@@ -53,7 +54,15 @@ const Donorin = {
               <button id="confirmButton">Ya</button>
             </div>
           </div>
-          <div class="modal-ajukan"></div>
+          <div class="modal-ajukan">
+            <span class="modal-ajukan-close-button">&times;</span>
+            <p>Apakah anda yakin akan mengajukan permintaan kepada user berikut?</p>
+            <div class="modal-ajukan-info"></div>
+            <div class="modal-ajukan-button">
+              <button id="ajukanCancelButton">Tidak</button>
+              <button id="ajukanConfirmButton">Ya</button>
+            </div>
+          </div>
         </div>
 
         <div class="donorin-list"></div>
@@ -84,6 +93,7 @@ const Donorin = {
     navButtonFunction();
     searchFunction();
     contributeButtonFunction();
+    submitButtonFunction();
   },
 };
 

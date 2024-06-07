@@ -308,7 +308,8 @@ $text-color: #fff;
             text-align: center;
             p {
               text-align: start;
-              padding-left: 10px;
+              margin: 0;
+              padding: 10px;
             }
           }
 
@@ -379,13 +380,111 @@ $text-color: #fff;
     }
   }
 
-  .modal-kontribusi-button {
+  .modal-ajukan {
+    display: none;
+    background-color: #fefefe;
+    margin: 200px auto;
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+
+    .modal-ajukan-close-button {
+      justify-self: end;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 2rem;
+      padding: 10px 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .modal-ajukan-info {
+      .user-card-container {
+        border: solid 1px #ececec;
+        border-radius: 10px;
+        background-color: $text-color;
+        padding: 10px;
+        box-shadow: 0 0 5px #000;
+
+        .user-card {
+          display: grid;
+
+          .user-card-status {
+            background-color: $primary-color;
+            padding: 5px;
+            color: $text-color;
+            border-radius: 7px;
+            text-align: center;
+            p {
+              text-align: start;
+              padding-left: 10px;
+              margin: 0;
+              padding: 10px;
+            }
+          }
+
+          .user-card-image {
+            width: 80px;
+            margin: 10px auto 15px auto;
+            border-radius: 50%;
+            border: solid 3px $primary-color;
+          }
+
+          .user-card-content {
+            display: grid;
+            text-align: center;
+            gap: 5px;
+            width: 100%;
+
+            .user-card-name {
+              font-size: 2rem;
+            }
+
+            .user-card-info {
+              display: flex;
+              justify-content: space-around;
+              text-align: center;
+              margin: 0;
+              padding: 5px;
+              background-color: #ececec;
+              border-radius: 5px;
+              width: 100%;
+
+              .user-card-blood {
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin: 0;
+              }
+
+              .user-card-address {
+                font-size: 1.5rem;
+                margin: 0;
+              }
+            }
+
+            button {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-ajukan-button {
     margin-top: 20px;
   }
 }
 
 #cancelButton,
-#confirmButton {
+#confirmButton,
+#ajukanCancelButton,
+#ajukanConfirmButton {
   background-color: $primary-color;
   padding: 15px 30px;
   border: none;
@@ -396,7 +495,8 @@ $text-color: #fff;
   margin: 10px 15px;
 }
 
-#confirmButton {
+#confirmButton,
+#ajukanConfirmButton {
   background-color: #04aa6d;
   padding: 15px 40px;
 }
