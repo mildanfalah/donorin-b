@@ -1,6 +1,7 @@
 import DonorinDbSource from "../../data/donorindb-source";
 import contributeButtonFunction from "../../utils/donorin-contribute-detail";
 import selectButtonFunction from "../../utils/donorin-filter";
+import registerTransactionFunction from "../../utils/donorin-register-transaction";
 import searchFunction from "../../utils/donorin-search";
 import submitButtonFunction from "../../utils/donorin-submit-detail";
 import navButtonFunction from "../../utils/home-nav";
@@ -62,7 +63,37 @@ const Donorin = {
               <button id="ajukanCancelButton">Tidak</button>
               <button id="ajukanConfirmButton">Ya</button>
             </div>
-          </div>
+            </div>
+            <div class="modal-permintaan">
+              <span class="modal-permintaan-close-button">&times;</span>
+              <form class="register-transaction-form">
+                <div class="form-group">
+                  <label for="namaPenerima">Nama Penerima</label>
+                  <input type="text" id="namaPenerima" name="namaPenerima" required>
+                </div>
+                <div class="form-group">
+                  <label for="kontakPenerima">No Hp Penerima</label>
+                  <input type="number" id="kontakPenerima" name="kontakPenerima" required>
+                </div>
+                <div class="form-group">
+                  <label for="lokasiPenerima">Lokasi</label>
+                  <input type="text" id="lokasiPenerima" name="lokasiPenerima" required>
+                </div>
+                <div class="form-group">
+                  <label for="goldarPenerima">Gol Darah Yang Dibutuhkan</label>
+                  <input type="text" id="goldarPenerima" name="goldarPenerima" required>
+                </div>
+                <div class="form-group">
+                  <label for="jumlahDarahDibutuhkan">Kebutuhan Jumlah Darah (ml)</label>
+                  <input type="number" id="jumlahDarahDibutuhkan" name="jumlahDarahDibutuhkan" required>
+                </div>
+                <div class="form-group">
+                  <label for="tanggalDibutuhkan">Tanggal Dibutuhkan</label>
+                  <input type="date" id="tanggalDibutuhkan" name="tanggalDibutuhkan" required>
+                </div>
+                <button type="submit" id="submit-register-transaction-button">Ajukan</button>
+              </form>
+            </div>
         </div>
 
         <div class="donorin-list"></div>
@@ -70,7 +101,7 @@ const Donorin = {
         <div class="no-data"></div>
 
         <div class="floating-button">
-          <button>
+          <button id="register-transaction-button">
             <i class="fa-solid fa-plus" style="color: #cd2c4e;"></i>
             </button>
         </div>
@@ -94,6 +125,7 @@ const Donorin = {
     searchFunction();
     contributeButtonFunction();
     submitButtonFunction();
+    registerTransactionFunction();
   },
 };
 

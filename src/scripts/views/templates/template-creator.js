@@ -128,9 +128,6 @@ const populateModalSubmit = (user) => `
                       user.lokasi
                     }</p>
                 </div>
-                <button id="submitButton" data-user-id="${
-                  user.id
-                }">Ajukan</button>
             </div>
         </div>
     </div>

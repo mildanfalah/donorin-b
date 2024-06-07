@@ -1,8 +1,5 @@
 import DonorinDbSource from "../data/donorindb-source";
-import {
-  populateModal,
-  populateModalSubmit,
-} from "../views/templates/template-creator";
+import { populateModalSubmit } from "../views/templates/template-creator";
 
 const submitButtonFunction = async () => {
   const users = await DonorinDbSource.donorinData();

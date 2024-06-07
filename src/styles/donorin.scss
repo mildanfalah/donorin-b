@@ -370,13 +370,13 @@ $text-color: #fff;
                 margin: 0;
               }
             }
-
-            button {
-              display: none;
-            }
           }
         }
       }
+    }
+
+    .modal-kontribusi-button {
+      margin-top: 20px;
     }
   }
 
@@ -466,10 +466,6 @@ $text-color: #fff;
                 margin: 0;
               }
             }
-
-            button {
-              display: none;
-            }
           }
         }
       }
@@ -481,10 +477,45 @@ $text-color: #fff;
   }
 }
 
+.modal-permintaan {
+  display: none;
+  background-color: #fefefe;
+  margin: 100px auto;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+
+  .modal-permintaan-close-button {
+    justify-self: end;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px 15px;
+  }
+
+  .register-transaction-form {
+    margin-top: 20px;
+    .form-group {
+      display: grid;
+      label {
+        text-align: left;
+        margin: 5px 0;
+      }
+      input {
+        border: 1px solid $primary-color;
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}
+
 #cancelButton,
 #confirmButton,
 #ajukanCancelButton,
-#ajukanConfirmButton {
+#ajukanConfirmButton,
+#submit-register-transaction-button {
   background-color: $primary-color;
   padding: 15px 30px;
   border: none;
