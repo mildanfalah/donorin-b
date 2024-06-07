@@ -3,6 +3,48 @@ $secondary-color: #242424;
 $text-color: #fff;
 
 @media (min-width: 600px) {
+  .wrapper-about-us {
+    .wrapper-header {
+      height: 70px;
+    }
+    .profile {
+      .card {
+        height: 300px;
+      }
+      .card-right {
+        #card-content {
+          width: 300px;
+          height: 300px;
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+      .card-left {
+        #card-content {
+          width: 300px;
+          height: 300px;
+
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-faq {
+    .wrapper-header {
+      height: 70px;
+    }
+    .faq {
+      width: 450px;
+      height: 110px;
+    }
+  }
   .top-bar__container {
     width: 80% !important;
   }
@@ -38,6 +80,75 @@ $text-color: #fff;
 }
 
 @media (min-width: 1000px) {
+  .donorin-list {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+  .history-container {
+    display: flex;
+    gap: 20px;
+    .penerima-history,
+    .pendonor-history {
+      flex-basis: 50%;
+    }
+  }
+  .wrapper-about-us {
+    .wrapper-header {
+      height: 80px;
+    }
+    .profile {
+      .card {
+        height: 400px;
+      }
+      .card-right {
+        #card-content {
+          width: 400px;
+          height: 400px;
+
+          img {
+            width: 200px;
+            height: 200px;
+          }
+          .desc {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .card-left {
+        #card-content {
+          width: 400px;
+          height: 400px;
+
+          img {
+            width: 200px;
+            height: 200px;
+          }
+          .desc {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-faq {
+    .wrapper-header {
+      height: 70px;
+    }
+    .faq {
+      width: 500px;
+      height: 110px;
+    }
+  }
   .home-content-body {
     width: 60%;
     margin: 0 auto;
@@ -66,7 +177,28 @@ $text-color: #fff;
       margin: 0;
 
       li {
-        padding: 15px;
+        display: flex;
+        width: 100px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s ease-in-out;
+
+        a {
+          color: $text-color;
+        }
+      }
+      li:hover {
+        background-color: $text-color;
+        border-radius: 0 10px 10px 0;
+
+        a {
+          color: $primary-color;
+          transition: 0.2s ease-in-out;
+        }
+        a:hover {
+          scale: 1.2;
+        }
       }
     }
 

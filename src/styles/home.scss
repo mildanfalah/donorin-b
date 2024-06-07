@@ -22,7 +22,7 @@ $text-color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 25%;
+      gap: 10%;
       flex-direction: row-reverse;
       margin: 20px 30px 0 30px;
 
@@ -35,10 +35,15 @@ $text-color: #fff;
         background-color: #fff;
         color: $primary-color;
         box-shadow: 2px 2px 7px rgba($color: #000000, $alpha: 0.7);
+        transition: .2s ease-in-out;
 
         p {
           text-align: center;
         }
+      }
+      a:hover {
+        background-color: $secondary-color;
+        color: $text-color;
       }
 
       img {
@@ -78,11 +83,16 @@ $text-color: #fff;
         min-width: 150px;
         min-height: 50px;
         box-shadow: 2px 2px 7px rgba($color: #000000, $alpha: 0.7);
+        transition: .2s ease-in-out;
 
         p {
           text-align: center;
           margin: 5px auto 0 auto;
         }
+      }
+      a:hover {
+        background-color: $secondary-color;
+        color: $text-color;
       }
 
       img {
