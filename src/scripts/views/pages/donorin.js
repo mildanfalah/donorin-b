@@ -1,4 +1,5 @@
 import DonorinDbSource from "../../data/donorindb-source";
+import contributeButtonFunction from "../../utils/donorin-contribute-detail";
 import selectButtonFunction from "../../utils/donorin-filter";
 import searchFunction from "../../utils/donorin-search";
 import navButtonFunction from "../../utils/home-nav";
@@ -9,7 +10,7 @@ import {
 
 const Donorin = {
   async render() {
-    return `       
+    return `
         <div class="top-content">
           <div class="top-content-wrapper">
               <div class="search-bar">
@@ -42,8 +43,23 @@ const Donorin = {
           </div>
         </div>
 
+        <div class="modal-container">
+          <div class="modal-kontribusi">
+            <span class="modal-close-button">&times;</span>
+            <p>Apakah anda yakin akan berkontribusi kepada user berikut?</p>
+            <div class="modal-kontribusi-info"></div>
+            <div class="modal-kontribusi-button">
+              <button id="cancelButton">Tidak</button>
+              <button id="confirmButton">Ya</button>
+            </div>
+          </div>
+          <div class="modal-ajukan"></div>
+        </div>
+
         <div class="donorin-list"></div>
+
         <div class="no-data"></div>
+
         <div class="floating-button">
           <button>
             <i class="fa-solid fa-plus" style="color: #cd2c4e;"></i>
@@ -56,6 +72,7 @@ const Donorin = {
     const users = await DonorinDbSource.donorinData();
     const userTransactions = await DonorinDbSource.transactionData();
     const usersContainer = document.querySelector(".donorin-list");
+
     users.forEach((user) => {
       usersContainer.innerHTML += createUserItemTemplate(user);
     });
@@ -66,6 +83,7 @@ const Donorin = {
     selectButtonFunction();
     navButtonFunction();
     searchFunction();
+    contributeButtonFunction();
   },
 };
 
