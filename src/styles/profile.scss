@@ -30,7 +30,7 @@ $text-color: #fff;
       font-weight: bold;
       font-size: 1rem;
       cursor: pointer;
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
     button:hover {
       background-color: $secondary-color;
@@ -60,6 +60,10 @@ $text-color: #fff;
     border-radius: 10px;
     padding: 15px;
     background-color: #f4f4f4;
+
+    #profile-form {
+      display: grid;
+    }
   }
 
   .history-container {

@@ -1,5 +1,6 @@
 import HOMECONTENT from "../../data/HOMECONTENT.json";
 import navButtonFunction from "../../utils/home-nav";
+import logoutFunction from "../../utils/logout-function";
 import { createHomeContentTemplate } from "../templates/template-creator";
 
 const Home = {
@@ -43,6 +44,7 @@ const Home = {
     });
 
     navButtonFunction();
+    logoutFunction();
   },
 };
 

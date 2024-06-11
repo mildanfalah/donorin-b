@@ -14,6 +14,14 @@ const profileLoginStatus = async () => {
   function logoutUser() {
     localStorage.removeItem("jwtToken");
     window.location.href = "/#/login";
+    changeLogoutToLogin();
+  }
+
+  function changeLogoutToLogin() {
+    if (!localStorage.getItem("jwtToken")) {
+      loginButton.classList.remove("hidden");
+      logoutButton.classList.add("hidden");
+    }
   }
 
   logoutButton.addEventListener("click", logoutUser);
@@ -35,9 +43,20 @@ const profileLoginStatus = async () => {
               </div>
             </div>
             <div class="profile-info">
-              <h2>${data[0].nama}</h2>
-              <p>Email: ${data[0].email}</p>
-              <p>Lokasi: ${data[0].gol_darah}</p>
+              <form id="profile-form">
+                <label for="nama" class="profile-label">Nama</label>
+                <input type="text" id="nama" name="nama" class="profile-input" readonly value=${data[0].nama}>
+                <label for="nik" class="profile-label">NIK</label>
+                <input type="number" id="nik" name="nik" class="profile-input" readonly value=${data[0].nik}>
+                <label for="email" class="profile-label">Email</label>
+                <input type="email" id="email" name="email" class="profile-input" readonly value=${data[0].email}>
+                <label for="kontak" class="profile-label">Kontak</label>
+                <input type="number" id="kontak" name="kontak" class="profile-input" readonly value=${data[0].kontak_telp}>
+                <label for="lokasi" class="profile-label">Lokasi</label>
+                <input type="text" id="lokasi" name="lokasi" class="profile-input" readonly value=${data[0].lokasi}>
+                <label for="goldar" class="profile-label">Golongan Darah</label>
+                <input type="text" id="goldar" name="goldar" class="profile-input" readonly value=${data[0].gol_darah}>
+              </form>
             </div>
             <div class="history-container">
               <div class="pendonor-history">
@@ -94,6 +113,22 @@ const profileLoginStatus = async () => {
       //   }
       //   const data = await response.json();
       //   return data;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  }
+
+  async function getUserTransaction() {
+    try {
+      const token = localStorage.getItem("jwtToken");
+      if (!token) throw new Error("No Token Found");
+      const decoded = jwtDecode(token);
+      const userId = decoded.id;
+
+      const response = await fetch(`${API_ENDPOINT.TRANSACTIONS}/${userId}`);
+      const responseJson = await response.json();
+      return responseJson.data;
     } catch (error) {
       console.error(error);
       return null;

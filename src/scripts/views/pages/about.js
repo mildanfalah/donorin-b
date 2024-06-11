@@ -1,4 +1,5 @@
 import navButtonFunction from "../../utils/home-nav";
+import logoutFunction from "../../utils/logout-function";
 
 const About = {
   async render() {
@@ -122,6 +123,7 @@ const About = {
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
     navButtonFunction();
+    logoutFunction();
   },
 };
 

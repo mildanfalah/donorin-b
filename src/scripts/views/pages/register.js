@@ -1,3 +1,5 @@
+import registerFunction from "../../utils/register-function";
+
 const Register = {
   async render() {
     return `
@@ -5,7 +7,10 @@ const Register = {
               <h1>Donor<span>in</span></h1>
               <h2>Buat Akun</h2>
   
-            <form class="login-form">
+            <form id="registerForm" class="login-form">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" required>
+
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
   
@@ -15,12 +20,12 @@ const Register = {
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" required>
 
-              <label for="tanggal lahir">Tanggal Lahir:</label>
-              <input type="date" id="tanggalLahir" name="tanggal lahir" required>
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirmPassword" name="confirm-password" required>
 
 
               <label for="syaratKetentuan" class="checkbox-container">
-                <input type="checkbox" id="syaratKetentuan">
+                <input type="checkbox" id="syaratKetentuan" required>
                 <span>Saya telah membaca dan menyetujui <a href="#/about">syarat dan ketentuan</a></span>
               </label>
   
@@ -33,6 +38,7 @@ const Register = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    registerFunction();
   },
 };
 

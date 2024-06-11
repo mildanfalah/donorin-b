@@ -16,17 +16,6 @@ const Profile = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
-    const historyListPendonor = document.querySelector(
-      ".history-list-pendonor"
-    );
-    const historyListPenerima = document.querySelector(
-      ".history-list-penerima"
-    );
-
-    // historyListPendonor.innerHTML += createProfileHistoryPendonor();
-    // historyListPenerima.innerHTML += createProfileHistoryPenerima();
-
     navButtonFunction();
     profileLoginStatus();
   },
