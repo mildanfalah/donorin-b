@@ -1,4 +1,5 @@
 import navButtonFunction from "../../utils/home-nav";
+import profileLoginStatus from "../../utils/profile-login-status";
 import {
   createProfileHistoryPendonor,
   createProfileHistoryPenerima,
@@ -7,33 +8,9 @@ import {
 const Profile = {
   async render() {
     return `
-          <div class="profile-container">
-            <div class="profile-edit-bar">
-              <p>Profile</p>
-              <button>Edit</button>
-            </div>
-            <div class="profile-image">
-              <div class="profile-image-clip">
-                <img src="./images/white2.png" alt="profile image">
-              </div>
-            </div>
-            <div class="profile-info">
-              <p>Nama</p>
-              <p>Alamat</p>
-              <p>Telepon</p>
-              <p>Gol Darah</p>
-              <p>Jenis Kelamin</p>
-            </div>
-            <div class="history-container">
-              <div class="pendonor-history">
-                <div class="history-title">Orang Yang Pernah Menolong Anda</div>
-                <div class="history-list-pendonor"></div>
-              </div>
-              <div class="penerima-history">
-                <div class="history-title">Orang Yang Pernah Anda Tolong</div>
-                <div class="history-list-penerima"></div>
-              </div>
-            </div>
+    <div class="profile-container"></div>
+          <div class="no-user-login">
+            <h2>Wah kamu belum Login, yuk Login dulu</h2>
           </div>
           `;
   },
@@ -47,10 +24,11 @@ const Profile = {
       ".history-list-penerima"
     );
 
-    historyListPendonor.innerHTML += createProfileHistoryPendonor();
-    historyListPenerima.innerHTML += createProfileHistoryPenerima();
+    // historyListPendonor.innerHTML += createProfileHistoryPendonor();
+    // historyListPenerima.innerHTML += createProfileHistoryPenerima();
 
     navButtonFunction();
+    profileLoginStatus();
   },
 };
 

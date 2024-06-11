@@ -4,8 +4,6 @@ const registerTransactionFunction = () => {
   const modalRegister = document.querySelector(".modal-permintaan");
   const closeButton = document.querySelector(".modal-permintaan-close-button");
 
-  console.log(floatingButton);
-
   floatingButton.addEventListener("click", () => {
     modal.classList.add("show");
     modalRegister.classList.add("show");

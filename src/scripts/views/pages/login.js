@@ -1,3 +1,5 @@
+import loginFunction from "../../utils/login-function";
+
 const Login = {
   async render() {
     return `
@@ -22,6 +24,7 @@ const Login = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    loginFunction();
   },
 };
 
