@@ -85,6 +85,7 @@ const requestTransaction = () => {
         modalTransaction.classList.remove("show");
         modalContainer.classList.remove("show");
         window.location.href = "#/donorin";
+        window.location.reload();
       } else {
         console.log("failed request");
         alert(result.message);

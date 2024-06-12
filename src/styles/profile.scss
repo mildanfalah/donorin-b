@@ -162,3 +162,26 @@ $text-color: #fff;
     }
   }
 }
+
+.no-user-login {
+  background-color: #fefefe;
+  margin: 120px auto 150px auto;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+
+  h2 {
+    margin-bottom: 50px;
+    a {
+      color: #00a3ff;
+    }
+  }
+
+  img {
+    width: 150px;
+    margin: 0 auto;
+  }
+}

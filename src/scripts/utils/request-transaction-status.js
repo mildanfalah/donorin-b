@@ -5,6 +5,9 @@ const requestTransactionStatus = async () => {
   const floatingButton = document.querySelector("#register-transaction-button");
   const modalContainer = document.querySelector(".modal-container");
   const modalPermintaan = document.querySelector(".modal-permintaan");
+  const contributeButtons = document.querySelectorAll("#contributeButton");
+  const submitButtons = document.querySelectorAll("#submitButton");
+  console.log(submitButtons);
 
   const showModal = (data) => {
     modalContainer.classList.add("show");
@@ -16,7 +19,8 @@ const requestTransactionStatus = async () => {
     modalContainer.innerHTML = `
             <div class="modal-status-no-login">
                 <span class="modal-request-close-button">&times;</span>
-                <h2>Ups... Anda harus login untuk membuat permintaan</h2>
+                <h2>Ups... Anda harus login untuk melanjutkan proses ini</h2>
+                <img src="./images/A+.png" alt="blood icon">
                 <a href="#/login">Ke Halaman Login</a>
             </div>
         `;
@@ -55,6 +59,30 @@ const requestTransactionStatus = async () => {
       } else {
         showAskToLogin();
       }
+    });
+  });
+
+  contributeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      getLoginSession().then((data) => {
+        if (data) {
+          showModal(data);
+        } else {
+          showAskToLogin();
+        }
+      });
+    });
+  });
+
+  submitButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      getLoginSession().then((data) => {
+        if (data) {
+          showModal(data);
+        } else {
+          showAskToLogin();
+        }
+      });
     });
   });
 };

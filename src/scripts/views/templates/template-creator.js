@@ -62,9 +62,9 @@ const createUserTransactionTemplate = (user) => `
                       user.jumlah_mililiter
                     }ml</p>
                 </div>
-                <button id="contributeButton" data-user-id="${
-                  user.id_user_pemohon
-                }">Kontribusi</button>
+                <button id="contributeButton" data-user-id-trx="${
+                  user.id
+                }" data-user-id="${user.id_user_pemohon}">Kontribusi</button>
             </div>
         </div>
     </div>
