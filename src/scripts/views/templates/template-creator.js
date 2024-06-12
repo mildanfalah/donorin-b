@@ -23,9 +23,9 @@ const createUserItemTemplate = (user) => `
                       user.lokasi
                     }</p>
                 </div>
-                <button id="submitButton" data-user-id="${
-                  user.id
-                }">Ajukan</button>
+                <button id="submitButton" data-submit-user-id-trx="${
+                  user.nama
+                }" data-user-id="${user.id}">Ajukan</button>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@ const createUserTransactionTemplate = (user) => `
                 </div>
                 <button id="contributeButton" data-user-id-trx="${
                   user.id
-                }" data-user-id="${user.id_user_pemohon}">Kontribusi</button>
+                }"  data-user-id="${user.id_user_pemohon}">Kontribusi</button>
             </div>
         </div>
     </div>

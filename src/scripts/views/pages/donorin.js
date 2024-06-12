@@ -1,5 +1,4 @@
 import DonorinDbSource from "../../data/donorindb-source";
-import contributeFunction from "../../utils/contribute-transaction";
 import contributeButtonFunction from "../../utils/donorin-contribute-detail";
 import selectButtonFunction from "../../utils/donorin-filter";
 import registerTransactionFunction from "../../utils/donorin-register-transaction";
@@ -133,7 +132,6 @@ const Donorin = {
     requestTransactionStatus();
     requestTransaction();
     logoutFunction();
-    contributeFunction();
   },
 };
 
