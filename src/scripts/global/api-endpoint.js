@@ -7,6 +7,8 @@ const API_ENDPOINT = {
   TRANSACTIONS: `${CONFIG.BASE_URL}transactions`,
   TRANSACTIONSDETAIL: `${CONFIG.BASE_URL}transaction-details`,
   PROFILE: `${CONFIG.BASE_URL}profile`,
+  HISTORY: `${CONFIG.BASE_URL}history-contributor`,
+  HISTORY2: `${CONFIG.BASE_URL}history-submitted`,
   DETAIL: `${CONFIG.BASE_URL}user-details`,
   ABOUT: `${CONFIG.BASE_URL}about`,
 };

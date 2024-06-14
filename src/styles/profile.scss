@@ -79,14 +79,14 @@ $text-color: #fff;
       border-radius: 10px;
       padding: 10px;
       color: $text-color;
-      margin: 20px auto 10px auto;
+      margin: 32px auto 10px auto;
       text-align: center;
     }
   }
 
   .history-card {
     background-color: $primary-color;
-    padding: 15px;
+    padding: 12px 12px 6px 12px;
     color: $text-color;
     border-radius: 10px;
 
@@ -94,7 +94,17 @@ $text-color: #fff;
       display: flex;
       padding: 10px 0;
       justify-content: space-between;
-      text-align: center;
+
+      .history-head-right {
+        text-align: end;
+      }
+
+      .history-head-left,
+      .history-head-right {
+        p {
+          margin: 5px 0;
+        }
+      }
     }
 
     .history-card-body-container {
@@ -120,6 +130,10 @@ $text-color: #fff;
             font-weight: bold;
             font-size: 1rem;
           }
+          a {
+            color: #00a3ff;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -127,8 +141,9 @@ $text-color: #fff;
 
   .history-card-penerima-container {
     background-color: $primary-color;
-    padding: 10px;
+    padding: 12px 12px 16px 12px;
     border-radius: 10px;
+    margin-bottom: 8px;
 
     .history-card-penerima-wrapper {
       background-color: #fff;

@@ -3,6 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import {
   createProfileHistoryPendonor,
   createProfileHistoryPenerima,
+  historyPendonor,
 } from "../views/templates/template-creator";
 
 const profileLoginStatus = async () => {
@@ -65,14 +66,14 @@ const profileLoginStatus = async () => {
 
                 <div class="radio-container">
                   <p class="sex">Jenis Kelamin Anda</p>
-                  <input type="radio" id="pria" name="jenisKelamin" checked="checked" disabled value="pria" ${
-                    data[0].jenis_kelamin === "pria" ? "checked" : ""
+                  <input type="radio" id="laki-laki" name="jenisKelamin" disabled value="laki-laki" ${
+                    data[0].jenis_kelamin === "laki-laki" ? "checked" : ""
                   }>
-                  <label for="pria">Pria</label><br>
-                  <input type="radio" id="wanita" name="jenisKelamin" disabled value="wanita" ${
-                    data[0].jenis_kelamin === "wanita" ? "checked" : ""
+                  <label for="laki-laki"> Laki-laki</label><br>
+                  <input type="radio" id="perempuan" name="jenisKelamin" disabled value="perempuan" ${
+                    data[0].jenis_kelamin === "perempuan" ? "checked" : ""
                   }>
-                  <label for="wanita">Wanita</label>
+                  <label for="perempuan"> Perempuan</label>
                 </div>
 
                 <label class="status-donor">
@@ -169,15 +170,39 @@ const profileLoginStatus = async () => {
     });
   };
 
-  function showHistory() {
+  function showHistory(dataHistory) {
     const historyListPendonor = document.querySelector(
       ".history-list-pendonor"
     );
-    const historyListPenerima = document.querySelector(
-      ".history-list-penerima"
+    // const historyListPenerima = document.querySelector(
+    //   ".history-list-penerima"
+    // );
+    console.log(dataHistory);
+    historyListPendonor.innerHTML += createProfileHistoryPendonor(dataHistory);
+    // historyListPenerima.innerHTML += createProfileHistoryPenerima(dataHistory);
+  }
+
+  async function showListPendonorHistory() {
+    const historyCardWrapper = document.querySelector(
+      ".history-card-body-container-wrapper"
     );
-    historyListPendonor.innerHTML += createProfileHistoryPendonor();
-    historyListPenerima.innerHTML += createProfileHistoryPenerima();
+    const historyData = await getHistory();
+
+    historyData.forEach((item) => {
+      item.detail.forEach((item) => {
+        historyCardWrapper.innerHTML += historyPendonor(item);
+        console.log(item);
+      });
+    });
+  }
+
+  async function historySubmittedData() {
+    const container = document.querySelector(".history-list-penerima");
+    const historyData = await getSubmittedHistory();
+
+    historyData.forEach((item) => {
+      container.innerHTML += createProfileHistoryPenerima(item);
+    });
   }
 
   const askToLogin = () => {
@@ -217,14 +242,30 @@ const profileLoginStatus = async () => {
     }
   }
 
-  async function getUserTransaction() {
+  async function getSubmittedHistory() {
     try {
       const token = localStorage.getItem("jwtToken");
       if (!token) throw new Error("No Token Found");
       const decoded = jwtDecode(token);
       const userId = decoded.id;
 
-      const response = await fetch(`${API_ENDPOINT.TRANSACTIONS}/${userId}`);
+      const response = await fetch(`${API_ENDPOINT.HISTORY2}/${userId}`);
+      const responseJson = await response.json();
+      return responseJson.data;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  }
+
+  async function getHistory() {
+    try {
+      const token = localStorage.getItem("jwtToken");
+      if (!token) throw new Error("No Token Found");
+      const decoded = jwtDecode(token);
+      const userId = decoded.id;
+
+      const response = await fetch(`${API_ENDPOINT.HISTORY}/${userId}`);
       const responseJson = await response.json();
       return responseJson.data;
     } catch (error) {
@@ -236,9 +277,13 @@ const profileLoginStatus = async () => {
   try {
     if (localStorage.getItem("jwtToken")) {
       const data = await getProfile();
+      const dataHistory = await getHistory();
+      const dataSubmitted = await getSubmittedHistory();
       if (data) {
         showProfile(data);
-        showHistory(data);
+        showHistory(dataHistory);
+        showListPendonorHistory(dataHistory);
+        historySubmittedData(dataSubmitted);
       } else {
         askToLogin();
       }

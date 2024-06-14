@@ -146,59 +146,75 @@ const createHomeContentTemplate = (content, themeClass, linkId) => `
     </div>
 `;
 
-const createProfileHistoryPendonor = () => `
+const createProfileHistoryPendonor = (dataHistory) => `
     <div class="history-card">
         <div class="history-card-head">
-            <div class="history-id">
-                <p>ID 03049</p>
-            </div>
-            <div class="history-date">
-                <p>Tanggal Dibutuhkan</p>
-                <p>30 Mei 2024</p>
+        <div class="history-head-left">
+            <p>Penerima: ${dataHistory[0].nama_penerima}</p>
+            <p>RS: ${dataHistory[0].nama_rs}</p>
+        </div>
+            <div class="history-head-right">
+                <p>ID ${dataHistory[0].transaction_id}</p>
+                <p>Dibutuhkan: ${dataHistory[0].tanggal_dibutuhkan.slice(
+                  0,
+                  10
+                )}</p>
             </div>
         </div>
-        <div class="history-card-body-container">
-            <p>Yudi Ari Nugroho</p>
-            <div class="history-card-body-content">
-                <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> AB-</p>
-                <p>Tgl Kontribusi: 23-03-2024</p>
-            </div>
-            <div class="history-card-body-content">
-                <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
-                <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
-            </div>
-        </div>
-        <div class="history-card-body-container">
-            <p>Yudi Ari Nugroho</p>
-            <div class="history-card-body-content">
-                <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> AB-</p>
-                <p>Tgl Kontribusi: 23-03-2024</p>
-            </div>
-            <div class="history-card-body-content">
-                <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
-                <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
-            </div>
-        </div>
-        
+        <div class="history-card-body-container-wrapper"></div>
     </div>
 `;
 
-const createProfileHistoryPenerima = () => `
+const historyPendonor = (dataHistory) => `
+        <div class="history-card-body-container">
+            <p>${dataHistory.nama_pendonor}</p>
+            <div class="history-card-body-content">
+                <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
+                  dataHistory.gol_darah
+                }</p>
+                <p>Tgl Kontribusi: ${dataHistory.tanggal_kontribusi.slice(
+                  0,
+                  10
+                )}</p>
+            </div>
+            <div class="history-card-body-content">
+                <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> <a href="https://wa.me/62${dataHistory.kontak_telp.slice(
+                  1
+                )}?text=Halo,%20saya%20adalah%20pemohon%20donor%20di%20aplikasi%20donorin" target="_blank">${
+  dataHistory.kontak_telp
+}</a></p>
+                <p><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
+                  dataHistory.lokasi_user
+                }</p>
+            </div>
+        </div>   
+`;
+
+const createProfileHistoryPenerima = (dataHistory) => `
     <div class="history-card-penerima-container">
         <div class="history-card-penerima-wrapper">
             <div class="history-card-head">
-                <p>Riwayat ID Penerima</p>
-                <p>ID 039050</p>
+                <p>ID Penerima</p>
+                <p>${dataHistory.transaction_id}</p>
             </div>
             <div class="history-card-body">
-                <p>Budi Herdi</p>
+                <p>${dataHistory.nama_penerima}</p>
                 <div class="history-card-body-content">
-                    <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> A-</p>
-                    <p>Tgl Kontribusi: 25-03-2024</p>
+                    <p><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
+                      dataHistory.gol_darah_dibutuhkan
+                    }</p>
+                    <p>Tgl Kontribusi: ${dataHistory.tanggal_kontribusi.slice(
+                      0,
+                      10
+                    )}</p>
                 </div>
                 <div class="history-card-body-content">
-                    <p><i class="fa-brands fa-whatsapp" style="color: #cd2c4e;"></i> 08123456789</p>
-                    <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> RS ANANDA</p>
+                    <p><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
+                      dataHistory.lokasi
+                    }</p>
+                    <p><i class="fa-solid fa-house-medical" style="color: #cd2c4e;"></i> ${
+                      dataHistory.nama_rs
+                    }</p>
                 </div>
             </div>
         </div>
@@ -212,4 +228,5 @@ export {
   createProfileHistoryPenerima,
   populateModal,
   populateModalSubmit,
+  historyPendonor,
 };
