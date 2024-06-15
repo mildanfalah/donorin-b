@@ -281,9 +281,14 @@ const profileLoginStatus = async () => {
       const dataSubmitted = await getSubmittedHistory();
       if (data) {
         showProfile(data);
-        showHistory(dataHistory);
-        showListPendonorHistory(dataHistory);
-        historySubmittedData(dataSubmitted);
+        if (dataHistory) {
+          showHistory(dataHistory);
+          showListPendonorHistory(dataHistory);
+        } else if (dataSubmitted) {
+          historySubmittedData(dataSubmitted);
+        } else {
+          console.log("No data found");
+        }
       } else {
         askToLogin();
       }
