@@ -19,6 +19,7 @@ const Donorin = {
     return `
         <div class="top-content">
           <div class="top-content-wrapper">
+            <div class="top-content-wrapp-left">
               <div class="search-bar">
                 <input id="searchElement" type="text" placeholder="Cari kota...">
               </div>
@@ -30,10 +31,14 @@ const Donorin = {
                       <img src="./images/white1.png" />
                     </div>
                   </div>
-                <div class="tagline-text">
-                  <p>Setetes Darah, Sejuta Harapan</p>
+                  <div class="tagline-text">
+                    <p>Setetes Darah, Sejuta Harapan</p>
+                  </div>
                 </div>
               </div>
+            </div>
+            
+            <div class="top-content-wrapp-right">
               <p class="selection-question">Apakah anda?</p>
               <div class="selection-button-container">
                 <p id="pendonorButton" class="selection-button pendonor-button button-selected">Pendonor</p>

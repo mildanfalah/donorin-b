@@ -2,80 +2,86 @@ $primary-color: #cd2c4e;
 $secondary-color: #242424;
 $text-color: #fff;
 
-.login-form-container {
-  background-color: $secondary-color;
-  padding: 50px 20px;
-  width: 90%;
-  margin: 150px auto;
-  border-radius: 10px;
+.login-wrapp {
+  margin: 0 !important;
+  height: 800px;
 
-  h1 {
-    color: $text-color;
-    font-style: italic;
-    margin: 0px auto 10px auto;
-
-    span {
-      color: $primary-color;
-    }
-  }
-
-  h2 {
-    color: $text-color;
-    margin: 0px auto 30px auto;
-    text-align: center;
-  }
-
-  .login-form {
-    display: grid;
-    color: $text-color;
-    width: 95%;
-    margin: 0 auto;
-
-    a {
-      color: #00a3ff;
-      padding: 20px 0;
-    }
-
-    button {
-      padding: 15px;
-      background-color: $primary-color;
-      font-weight: bold;
-      font-size: 1.1rem;
+  .login-form-container {
+    background-color: $secondary-color;
+    padding: 50px 20px;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+  
+    h1 {
       color: $text-color;
-      margin-top: 30px;
-      border-radius: 10px;
+      font-style: italic;
+      margin: 0px auto 10px auto;
+  
+      span {
+        color: $primary-color;
+      }
     }
-
-    p {
-      margin-top: 30px;
+  
+    h2 {
+      color: $text-color;
+      margin: 0px auto 30px auto;
+      text-align: center;
+    }
+  
+    .login-form {
+      display: grid;
+      color: $text-color;
+      width: 95%;
+      margin: 0 auto;
+  
+      a {
+        color: #00a3ff;
+        padding: 20px 0;
+      }
+  
+      button {
+        padding: 15px;
+        background-color: $primary-color;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: $text-color;
+        margin-top: 30px;
+        border-radius: 10px;
+      }
+  
+      p {
+        margin-top: 30px;
+      }
     }
   }
-}
-
-label {
-  margin: 10px 0;
-  font-size: 1.2rem;
-}
-
-input {
-  font-size: 1.2rem;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-// register
-.checkbox-container {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0 0 0;
-
+  
+  label {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
   input {
-    width: 2rem;
+    font-size: 1.2rem;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
   }
-
-  span {
-    padding: 10px 5px;
-    font-size: 1rem;
+  
+  // register
+  .checkbox-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 0 0;
+  
+    input {
+      width: 2rem;
+    }
+  
+    span {
+      padding: 10px 5px;
+      font-size: 1rem;
+    }
   }
 }
+
