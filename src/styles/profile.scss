@@ -4,7 +4,7 @@ $text-color: #fff;
 
 .profile-container {
   display: grid;
-  width: 80%;
+  width: 90%;
   gap: 10px;
   margin: 30px auto;
 
@@ -13,7 +13,7 @@ $text-color: #fff;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    padding: 5px 30px;
+    padding: 12px 30px;
 
     p {
       color: $text-color;
@@ -69,7 +69,13 @@ $text-color: #fff;
     background-color: #f4f4f4;
 
     #profile-form {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+
+      .profile-form-input, .profile-form-choose {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 

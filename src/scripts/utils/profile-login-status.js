@@ -47,42 +47,48 @@ const profileLoginStatus = async () => {
             </div>
             <div class="profile-info">
               <form id="profile-form">
-                <label for="kontak" class="profile-label">Kontak</label>
-                <input type="text" id="kontak" name="kontak" class="profile-input" readonly value=${
-                  data[0].kontak_telp
-                }>
-                <label for="lokasi" class="profile-label">lokasi</label>
-                <input type="text" id="lokasi" name="lokasi" class="profile-input" readonly value=${
-                  data[0].lokasi
-                }>
-                <label for="goldar" class="profile-label">Golongan Darah</label>
-                <input type="text" id="goldar" name="goldar" class="profile-input" readonly value=${
-                  data[0].gol_darah
-                }>
-                <label for="usia" class="profile-label">Usia</label>
-                <input type="number" id="usia" name="usia" class="profile-input" readonly value=${
-                  data[0].usia
-                }>
+                <div class="profile-form-input">
+                  <label for="kontak" class="profile-label">Kontak</label>
+                  <input type="text" id="kontak" name="kontak" class="profile-input" readonly value=${
+                    data[0].kontak_telp
+                  }>
+                  <label for="lokasi" class="profile-label">lokasi</label>
+                  <input type="text" id="lokasi" name="lokasi" class="profile-input" readonly value=${
+                    data[0].lokasi
+                  }>
+                  <label for="goldar" class="profile-label">Golongan Darah</label>
+                  <input type="text" id="goldar" name="goldar" class="profile-input" readonly value=${
+                    data[0].gol_darah
+                  }>
+                  <label for="usia" class="profile-label">Usia</label>
+                  <input type="number" id="usia" name="usia" class="profile-input" readonly value=${
+                    data[0].usia
+                  }>
 
-                <div class="radio-container">
-                  <p class="sex">Jenis Kelamin Anda</p>
-                  <input type="radio" id="laki-laki" name="jenisKelamin" disabled value="laki-laki" ${
-                    data[0].jenis_kelamin === "laki-laki" ? "checked" : ""
-                  }>
-                  <label for="laki-laki"> Laki-laki</label><br>
-                  <input type="radio" id="perempuan" name="jenisKelamin" disabled value="perempuan" ${
-                    data[0].jenis_kelamin === "perempuan" ? "checked" : ""
-                  }>
-                  <label for="perempuan"> Perempuan</label>
                 </div>
 
-                <label class="status-donor">
-                  Apakah sekarang anda dalam keadaan siap mendonor? <br>
-                  <input type="checkbox" id="status" name="status" disabled value="active" ${
-                    data[0].status_donor === "active" ? "checked" : ""
-                  }> Saya yakin sekarang saya siap mendonor
-                  <span class="slider round"></span>
-                </label>
+                <div class="profile-form-choose">
+                  <div class="radio-container">
+                    <p class="sex">Jenis Kelamin Anda</p>
+                    <input type="radio" id="laki-laki" name="jenisKelamin" disabled value="laki-laki" ${
+                      data[0].jenis_kelamin === "laki-laki" ? "checked" : ""
+                    }>
+                    <label for="laki-laki"> Laki-laki</label><br>
+                    <input type="radio" id="perempuan" name="jenisKelamin" disabled value="perempuan" ${
+                      data[0].jenis_kelamin === "perempuan" ? "checked" : ""
+                    }>
+                    <label for="perempuan"> Perempuan</label>
+                  </div>
+
+                  <label class="status-donor">
+                    Apakah sekarang anda dalam keadaan siap mendonor? <br>
+                    <input type="checkbox" id="status" name="status" disabled value="active" ${
+                      data[0].status_donor === "active" ? "checked" : ""
+                    }> Saya yakin sekarang saya siap mendonor
+                    <span class="slider round"></span>
+                  </label>
+
+                </div>
 
               </form>
             </div>

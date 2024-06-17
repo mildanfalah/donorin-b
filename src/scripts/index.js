@@ -1,11 +1,11 @@
 import "regenerator-runtime";
 import "../styles/about.scss"
 import "../styles/style.scss";
-import "../styles/responsive.scss";
 import "../styles/home.scss";
 import "../styles/profile.scss";
 import "../styles/donorin.scss";
 import "../styles/login.scss";
+import "../styles/responsive.scss";
 import App from "./views/app";
 
 const app = new App({

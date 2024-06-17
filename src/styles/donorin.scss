@@ -2,34 +2,41 @@ $primary-color: #cd2c4e;
 $secondary-color: #242424;
 $text-color: #fff;
 
-.top-content-wrapper {
-  width: 90%;
-  margin: 5px auto;
-}
 .top-content {
+  width: 100%;
   position: relative;
   background-color: $primary-color;
   padding: 15px 0 20px 0;
-  // border-bottom-right-radius: 10%;
-  // border-bottom-left-radius: 10%;
   border-radius: 0 0 20px 20px;
-  // position: sticky;
   top: 0;
+  margin: auto;
 
-  .search-bar {
-    top: 0;
-    width: 100%;
-    margin: 5px auto 0 auto;
+  .top-content-wrapper {
     display: flex;
-    justify-content: center;
-    background-color: $text-color;
-    border-radius: 10px;
+    flex-direction: column;
+    margin: 0.5rem 1.2rem;
+    
+    .top-content-wrapp-left {
+      // flex: 1;
 
-    input {
-      width: 100%;
-      border: none;
-      margin: 0;
+      .search-bar {
+        // top: 0;
+        width: 100%;
+        margin: 5px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: $text-color;
+        border-radius: 10px;
+  
+        input {
+          width: 100%;
+          border: none;
+          margin: 0;
+        }
+  
+      }
     }
+
 
     button {
       background-color: $primary-color;
@@ -42,7 +49,9 @@ $text-color: #fff;
         font-size: 1.5rem;
       }
     }
+    
   }
+
 
   .selection-content {
     width: 100%;
