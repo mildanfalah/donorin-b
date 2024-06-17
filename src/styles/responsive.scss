@@ -13,23 +13,39 @@ $text-color: #fff;
       }
       .card-right {
         #card-content {
-          width: 300px;
-          height: 300px;
+          width: 280px;
+          height: 280px;
+          gap: 1rem;
 
           img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
+          }
+
+          .desc {
+            .desc-title {
+              gap: 0.25rem;
+
+            }
           }
         }
       }
       .card-left {
         #card-content {
-          width: 300px;
-          height: 300px;
+          width: 280px;
+          height: 280px;
+          gap: 1rem;
 
           img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
+          }
+
+          .desc {
+            .desc-title {
+              gap: 0.25rem;
+
+            }
           }
         }
       }
@@ -37,12 +53,20 @@ $text-color: #fff;
   }
 
   .wrapper-faq {
+    margin-block: 3rem;
+    
     .wrapper-header {
       height: 70px;
     }
-    .faq {
-      width: 450px;
-      height: 110px;
+
+    .main-faq {
+      width: 100%;
+      max-width: 640px;
+      margin: 20px;
+
+      .faq {
+        width: 100%;
+      }
     }
   }
   .top-bar__container {
@@ -80,9 +104,39 @@ $text-color: #fff;
 }
 
 @media (min-width: 1000px) {
-  .donorin-list {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  
+  .top-content {
+
+    .top-content-wrapper {
+      flex-direction: row !important;
+      gap: 4rem;
+      margin: 0 auto;
+      width: 75%;
+      max-width: 1200px;
+  
+      .top-content-wrapp-left {
+        flex: 1;
+      }
+  
+      .top-content-wrapp-right {
+        flex: 1;
+      }
+    }
   }
+
+  .donorin-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+
+  #profile-form {
+    flex-direction: row !important;
+    gap: 3rem;
+
+    .profile-form-input, .profile-form-choose {
+      flex: 1;
+    }
+  }
+
   .history-container {
     display: flex;
     gap: 20px;
@@ -91,6 +145,7 @@ $text-color: #fff;
       flex-basis: 50%;
     }
   }
+
   .wrapper-about-us {
     .wrapper-header {
       height: 80px;
@@ -101,38 +156,86 @@ $text-color: #fff;
       }
       .card-right {
         #card-content {
-          width: 400px;
-          height: 400px;
+          width: 360px;
+          height: 360px;
+          top: 20px;
 
           img {
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
           }
           .desc {
-            h3 {
-              font-size: 20px;
+            .desc-sosmed {
+              display: flex;
+              gap: 0.25rem;
+              align-items: center;
+              font-size: 2rem;
+              color: white;
+
+              a {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+
+                i {
+                  width: 100%;
+                  text-align: center;
+                }
+              }
             }
-            p {
-              font-size: 20px;
+
+            .desc-title {
+              h3 {
+                font-size: 1.4rem;
+              }
+              p {
+                font-size: 1.2rem;
+              }
+
             }
           }
         }
       }
       .card-left {
         #card-content {
-          width: 400px;
-          height: 400px;
+          width: 360px;
+          height: 360px;
+          top: 20px;
 
           img {
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
           }
           .desc {
-            h3 {
-              font-size: 20px;
+            .desc-sosmed {
+              display: flex;
+              gap: 0.25rem;
+              align-items: center;
+              font-size: 2rem;
+              color: white;
+
+              a {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+
+                i {
+                  width: 100%;
+                  text-align: center;
+                }
+              }
             }
-            p {
-              font-size: 20px;
+
+            .desc-title {
+              h3 {
+                font-size: 1.4rem;
+              }
+              p {
+                font-size: 1.2rem;
+              }
+
             }
           }
         }
@@ -141,12 +244,20 @@ $text-color: #fff;
   }
 
   .wrapper-faq {
+    margin-block: 5rem;
+
     .wrapper-header {
       height: 70px;
     }
-    .faq {
-      width: 500px;
-      height: 110px;
+    .main-faq {
+      width: 100%;
+      max-width: 1200px;
+      margin-block: 4rem;
+      padding: 0 10rem;
+
+      .faq {
+        width: 100%;
+      }
     }
   }
   .home-content-body {
@@ -175,6 +286,7 @@ $text-color: #fff;
     ul {
       display: grid;
       margin: 0;
+      align-items: center;
 
       li {
         display: flex;
@@ -186,6 +298,11 @@ $text-color: #fff;
 
         a {
           color: $text-color;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
       }
       li:hover {
@@ -208,17 +325,14 @@ $text-color: #fff;
     }
   }
 
-  .top-content-wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-
   .donorin-list {
-    width: 80% !important;
+    max-width: 1200px;
+    width: 75% !important;
   }
 
   .profile-container {
-    width: 70% !important;
+    max-width: 1200px;
+    width: 75% !important;
   }
 
   footer {
