@@ -1,5 +1,5 @@
 import "regenerator-runtime";
-import "../styles/about.scss"
+import "../styles/about.scss";
 import "../styles/style.scss";
 import "../styles/responsive.scss";
 import "../styles/home.scss";

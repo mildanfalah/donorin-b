@@ -169,6 +169,8 @@ $text-color: #fff;
 
       .user-card-image {
         width: 80px;
+        height: 80px;
+        object-fit: cover;
         margin: 10px auto 15px auto;
         border-radius: 50%;
         border: solid 3px $primary-color;
@@ -347,6 +349,8 @@ $text-color: #fff;
 
           .user-card-image {
             width: 80px;
+            height: 80px;
+            object-fit: cover;
             margin: 10px auto 15px auto;
             border-radius: 50%;
             border: solid 3px $primary-color;
@@ -462,6 +466,8 @@ $text-color: #fff;
 
           .user-card-image {
             width: 80px;
+            height: 80px;
+            object-fit: cover;
             margin: 10px auto 15px auto;
             border-radius: 50%;
             border: solid 3px $primary-color;
