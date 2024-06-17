@@ -108,6 +108,13 @@ const profileLoginStatus = async () => {
     //   }
     // });
 
+    const nameElement = document.querySelector(".profile-name");
+    if (nameElement) {
+      const name = nameElement.textContent;
+      const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+      nameElement.textContent = capitalizedName;
+    }
+
     const editButton = document.querySelector("#editButton");
 
     editButton.addEventListener("click", async () => {
