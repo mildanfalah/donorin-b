@@ -5,10 +5,13 @@ const createUserItemTemplate = (user) => `
       user.status_donor === "inactive" ? "hidden" : ""
     }">
         <div class="user-card">
-            <div class="user-card-status">
+            <div class="user-card-status" style="display:flex;">
                 <p id="userStatus">${
                   user.status_donor === "active" ? "Pendonor" : "inactive"
                 }</p>
+                <div class="user-card-id" style="color:#cd2c4e;">${
+                  user.id
+                }</div>
             </div>
             <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${
   user.id
@@ -34,8 +37,11 @@ const createUserItemTemplate = (user) => `
 const createUserTransactionTemplate = (user) => `
     <div class="user-card-container">
         <div class="user-card">
-            <div class="user-card-status">
+            <div class="user-card-status" style="display:flex;">
                 <p id="userStatus">Penerima</p>
+                <div class="user-card-id" style="color:#cd2c4e;">${
+                  user.id_user_pemohon
+                }</div>
             </div>
             <img class="user-card-image" src="${CONFIG.BASE_IMAGE_URL}?img=${
   user.id

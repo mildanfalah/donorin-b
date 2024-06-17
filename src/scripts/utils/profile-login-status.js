@@ -251,9 +251,12 @@ const profileLoginStatus = async () => {
 
       const response = await fetch(`${API_ENDPOINT.HISTORY2}/${userId}`);
       const responseJson = await response.json();
+      if (!response.ok) {
+        throw new Error(response.message || "Failed to fetch profile");
+      }
       return responseJson.data;
     } catch (error) {
-      console.error(error);
+      console.log("No data found");
       return null;
     }
   }

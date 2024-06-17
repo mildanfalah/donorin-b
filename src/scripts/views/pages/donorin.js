@@ -1,3 +1,4 @@
+import { jwtDecode } from "jwt-decode";
 import DonorinDbSource from "../../data/donorindb-source";
 import contributeButtonFunction from "../../utils/donorin-contribute-detail";
 import selectButtonFunction from "../../utils/donorin-filter";
@@ -116,11 +117,19 @@ const Donorin = {
     const userTransactions = await DonorinDbSource.transactionData();
     const usersContainer = document.querySelector(".donorin-list");
 
+    const token = localStorage.getItem("jwtToken");
+    const decoded = jwtDecode(token);
+    const loggedInUserId = decoded.id;
+
     users.forEach((user) => {
-      usersContainer.innerHTML += createUserItemTemplate(user);
+      if (user.id !== loggedInUserId) {
+        usersContainer.innerHTML += createUserItemTemplate(user);
+      }
     });
     userTransactions.forEach((user) => {
-      usersContainer.innerHTML += createUserTransactionTemplate(user);
+      if (user.id_user_pemohon !== loggedInUserId) {
+        usersContainer.innerHTML += createUserTransactionTemplate(user);
+      }
     });
 
     selectButtonFunction();

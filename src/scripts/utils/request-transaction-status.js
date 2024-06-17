@@ -7,7 +7,6 @@ const requestTransactionStatus = async () => {
   const modalPermintaan = document.querySelector(".modal-permintaan");
   const contributeButtons = document.querySelectorAll("#contributeButton");
   const submitButtons = document.querySelectorAll("#submitButton");
-  console.log(submitButtons);
 
   const showModal = (data) => {
     modalContainer.classList.add("show");
