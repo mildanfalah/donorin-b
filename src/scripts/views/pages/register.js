@@ -4,6 +4,8 @@ const Register = {
   async render() {
     return `
         <div class="register-wrapp">
+        <img src="./images/BG1.png">
+        
           <div class="login-form-container">
               <h1>Donor<span>in</span></h1>
               <h2>Buat Akun</h2>

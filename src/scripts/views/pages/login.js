@@ -4,6 +4,7 @@ const Login = {
   async render() {
     return `
         <div class="login-wrapp">
+        <img src="./images/BG1.png">
           <div class="login-form-container">
               <h1>Donor<span>in</span></h1>
               <h2>Masuk</h2>
