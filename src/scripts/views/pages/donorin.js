@@ -56,7 +56,7 @@ const Donorin = {
 
         <div class="modal-container">
           <div class="modal-kontribusi">
-            <span class="modal-close-button">&times;</span>
+            <span class="modal-close-button hidden" >&times;</span>
             <p>Apakah anda yakin akan berkontribusi kepada user berikut?</p>
             <div class="modal-kontribusi-info"></div>
             <div class="modal-kontribusi-button">
@@ -65,7 +65,7 @@ const Donorin = {
             </div>
           </div>
           <div class="modal-ajukan">
-            <span class="modal-ajukan-close-button">&times;</span>
+            <span class="modal-ajukan-close-button hidden">&times;</span>
             <p>Apakah anda yakin akan mengajukan permintaan kepada user berikut?</p>
             <div class="modal-ajukan-info"></div>
             <div class="modal-ajukan-button">
@@ -74,7 +74,7 @@ const Donorin = {
             </div>
             </div>
             <div class="modal-permintaan">
-              <span class="modal-permintaan-close-button">&times;</span>
+              <span class="modal-permintaan-close-button hidden">&times;</span>
               <form id="registerTransactionForm" class="register-transaction-form">
                 <div class="form-group">
                   <label for="namaPenerima">Nama Penerima</label>
@@ -100,6 +100,7 @@ const Donorin = {
                   <label for="namaRumahSakit">Nama Rumah Sakit / PMI</label>
                   <input type="text" id="namaRumahSakit" name="namaRumahSakit" required>
                 </div>
+                <button id="permintaanCancelButton">Batal</button>
                 <button type="submit" id="submit-register-transaction-button">Ajukan</button>
               </form>
             </div>

@@ -3,13 +3,14 @@ const registerTransactionFunction = () => {
   const modal = document.querySelector(".modal-container");
   const modalRegister = document.querySelector(".modal-permintaan");
   const closeButton = document.querySelector(".modal-permintaan-close-button");
+  const cancelButton = document.querySelector("#permintaanCancelButton");
 
   floatingButton.addEventListener("click", () => {
     modal.classList.add("show");
     modalRegister.classList.add("show");
   });
 
-  closeButton.addEventListener("click", () => {
+  cancelButton.addEventListener("click", () => {
     modal.classList.remove("show");
     modalRegister.classList.remove("show");
   });

@@ -5,12 +5,23 @@ const requestTransactionStatus = async () => {
   const floatingButton = document.querySelector("#register-transaction-button");
   const modalContainer = document.querySelector(".modal-container");
   const modalPermintaan = document.querySelector(".modal-permintaan");
+  const modalKontribusi = document.querySelector(".modal-kontribusi");
+  const modalAjukan = document.querySelector(".modal-ajukan");
   const contributeButtons = document.querySelectorAll("#contributeButton");
   const submitButtons = document.querySelectorAll("#submitButton");
 
-  const showModal = (data) => {
+  const showModalFloating = () => {
     modalContainer.classList.add("show");
     modalPermintaan.classList.add("show");
+  };
+
+  const showModalContribute = () => {
+    modalContainer.classList.add("show");
+    modalKontribusi.classList.add("show");
+  };
+  const showModalAjukan = () => {
+    modalContainer.classList.add("show");
+    modalAjukan.classList.add("show");
   };
 
   const showAskToLogin = () => {
@@ -54,7 +65,7 @@ const requestTransactionStatus = async () => {
   floatingButton.addEventListener("click", () => {
     getLoginSession().then((data) => {
       if (data) {
-        showModal(data);
+        showModalFloating(data);
       } else {
         showAskToLogin();
       }
@@ -65,7 +76,7 @@ const requestTransactionStatus = async () => {
     button.addEventListener("click", () => {
       getLoginSession().then((data) => {
         if (data) {
-          showModal(data);
+          showModalContribute(data);
         } else {
           showAskToLogin();
         }
@@ -77,7 +88,7 @@ const requestTransactionStatus = async () => {
     button.addEventListener("click", () => {
       getLoginSession().then((data) => {
         if (data) {
-          showModal(data);
+          showModalAjukan(data);
         } else {
           showAskToLogin();
         }

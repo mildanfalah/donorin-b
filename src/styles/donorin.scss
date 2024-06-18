@@ -534,6 +534,17 @@ $text-color: #fff;
   padding: 20px;
   text-align: center;
 
+  label {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 1.2rem;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+
   .modal-permintaan-close-button {
     justify-self: end;
     color: $primary-color;
@@ -562,6 +573,7 @@ $text-color: #fff;
 #confirmButton,
 #ajukanCancelButton,
 #ajukanConfirmButton,
+#permintaanCancelButton,
 #submit-register-transaction-button {
   background-color: $primary-color;
   padding: 15px 30px;
@@ -574,6 +586,7 @@ $text-color: #fff;
 }
 
 #confirmButton,
+#submit-register-transaction-button,
 #ajukanConfirmButton {
   background-color: #04aa6d;
   padding: 15px 40px;

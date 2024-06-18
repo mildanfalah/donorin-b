@@ -27,27 +27,27 @@ const contributeButtonFunction = async () => {
       });
 
       userTransactionsInfo.innerHTML = populateModal(user);
-      const modal = document.querySelector(".modal-container");
-      modal.classList.add("show");
+      // const modal = document.querySelector(".modal-container");
       modalContribute.classList.add("show");
+      modal.classList.add("show");
     });
   });
 
   closeButton.addEventListener("click", () => {
-    modal.classList.remove("show");
     modalContribute.classList.remove("show");
+    modal.classList.remove("show");
   });
 
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.classList.remove("show");
       modalContribute.classList.remove("show");
+      modal.classList.remove("show");
     }
   });
 
   cancelButton.addEventListener("click", () => {
-    modal.classList.remove("show");
     modalContribute.classList.remove("show");
+    modal.classList.remove("show");
   });
 
   confirmButton.addEventListener("click", async () => {
@@ -109,8 +109,8 @@ const contributeButtonFunction = async () => {
       if (response.ok) {
         console.log("request-success");
         alert("request success");
-        modal.classList.remove("show");
         modalContribute.classList.remove("show");
+        modal.classList.remove("show");
         window.location.href = "#/donorin";
         window.location.reload();
       } else {
