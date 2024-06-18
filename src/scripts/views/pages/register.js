@@ -3,6 +3,7 @@ import registerFunction from "../../utils/register-function";
 const Register = {
   async render() {
     return `
+        <div class="register-wrapp">
           <div class="login-form-container">
               <h1>Donor<span>in</span></h1>
               <h2>Buat Akun</h2>
@@ -33,6 +34,7 @@ const Register = {
               <p>Sudah punya akun? <a href="/#/login">Masuk</a></p>
             </form>
           </div>
+        </div>
           `;
   },
 

@@ -122,18 +122,18 @@ const Donorin = {
     const userTransactions = await DonorinDbSource.transactionData();
     const usersContainer = document.querySelector(".donorin-list");
 
-    const token = localStorage.getItem("jwtToken");
-    const decoded = jwtDecode(token);
-    const loggedInUserId = decoded.id;
-
     users.forEach((user) => {
-      if (user.id !== loggedInUserId) {
-        usersContainer.innerHTML += createUserItemTemplate(user);
-      }
+      usersContainer.innerHTML += createUserItemTemplate(user);
     });
     userTransactions.forEach((user) => {
-      if (user.id_user_pemohon !== loggedInUserId) {
-        usersContainer.innerHTML += createUserTransactionTemplate(user);
+      usersContainer.innerHTML += createUserTransactionTemplate(user);
+    });
+
+    const userCardNames = document.querySelectorAll(".user-card-name");
+    userCardNames.forEach((name) => {
+      if (name.textContent) {
+        name.textContent =
+          name.textContent.charAt(0).toUpperCase() + name.textContent.slice(1);
       }
     });
 

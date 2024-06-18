@@ -1,6 +1,3 @@
-import { jwtDecode } from "jwt-decode";
-import API_ENDPOINT from "../global/api-endpoint";
-
 const selectButtonFunction = async () => {
   const selectionButton = document.querySelectorAll(".selection-button");
   const descriptionBars = document.querySelectorAll(".description-bar");
@@ -20,28 +17,6 @@ const selectButtonFunction = async () => {
       hidePendonorUsers();
     }
   }
-
-  async function userData() {
-    try {
-      const token = localStorage.getItem("jwtToken");
-      const decoded = jwtDecode(token);
-      const userId = decoded.id;
-
-      const response = await fetch(`${API_ENDPOINT.DETAIL}/${userId}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const responseJson = await response.json();
-      return responseJson.data;
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  const getUserData = await userData();
 
   function removeSelection() {
     selectionButton.forEach((button) =>

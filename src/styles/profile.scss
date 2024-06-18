@@ -68,11 +68,39 @@ $text-color: #fff;
     padding: 15px;
     background-color: #f4f4f4;
 
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .status-donor {
+      margin-top: 20px;
+    }
+
+    .save-button {
+      background-color: $primary-color;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0 0 0;
+      color: $text-color;
+      font-weight: bold;
+      box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 1);
+      cursor: pointer;
+    }
+
+    .save-button:hover {
+      background-color: #242424;
+      transition: ease-in-out 0.2s;
+    }
+
     #profile-form {
       display: flex;
       flex-direction: column;
 
-      .profile-form-input, .profile-form-choose {
+      .profile-form-input,
+      .profile-form-choose {
         display: flex;
         flex-direction: column;
       }

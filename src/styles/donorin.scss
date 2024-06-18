@@ -15,28 +15,29 @@ $text-color: #fff;
     display: flex;
     flex-direction: column;
     margin: 0.5rem 1.2rem;
-    
+
     .top-content-wrapp-left {
       // flex: 1;
 
       .search-bar {
         // top: 0;
         width: 100%;
-        margin: 5px auto 0 auto;
+        margin: 5px auto 20px auto;
         display: flex;
         justify-content: center;
         background-color: $text-color;
         border-radius: 10px;
-  
+
         input {
+          border-radius: 10px;
           width: 100%;
           border: none;
           margin: 0;
+          padding: 10px;
+          font-size: 1.3rem;
         }
-  
       }
     }
-
 
     button {
       background-color: $primary-color;
@@ -49,9 +50,7 @@ $text-color: #fff;
         font-size: 1.5rem;
       }
     }
-    
   }
-
 
   .selection-content {
     width: 100%;
@@ -125,6 +124,7 @@ $text-color: #fff;
       text-align: center;
       opacity: 0.8;
       color: $text-color;
+      cursor: pointer;
     }
 
     .button-selected {

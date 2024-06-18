@@ -1,6 +1,7 @@
 const ResetPassword = {
   async render() {
     return `
+        <div class="login-wrapp">
           <div class="login-form-container">
               <h1>Donor<span>in</span></h1>
               <h2>Reset Password</h2>
@@ -13,6 +14,7 @@ const ResetPassword = {
               <p>Belum punya akun? <a href="/#/register">Daftar</a></p>
             </form>
           </div>
+        </div>
           `;
   },
 

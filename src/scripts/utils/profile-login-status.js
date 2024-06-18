@@ -84,7 +84,7 @@ const profileLoginStatus = async () => {
                     Apakah sekarang anda dalam keadaan siap mendonor? <br>
                     <input type="checkbox" id="status" name="status" disabled value="active" ${
                       data[0].status_donor === "active" ? "checked" : ""
-                    }> Saya yakin sekarang saya siap mendonor
+                    }> Saya siap mendonor
                     <span class="slider round"></span>
                   </label>
 
@@ -103,16 +103,6 @@ const profileLoginStatus = async () => {
               </div>
             </div>
     `;
-
-    // const statusCheckbox = document.getElementById("status");
-
-    // statusCheckbox.addEventListener("change", function () {
-    //   if (this.checked) {
-    //     return "active";
-    //   } else {
-    //     return "inactive";
-    //   }
-    // });
 
     const nameElement = document.querySelector(".profile-name");
     if (nameElement) {
@@ -143,7 +133,6 @@ const profileLoginStatus = async () => {
         const decoded = jwtDecode(token);
         const userId = decoded.id;
         const formData = new FormData(editForm);
-        console.log(formData.get("goldar"));
         const data = {
           kontak_telp: formData.get("kontak"),
           lokasi: formData.get("lokasi"),
@@ -154,7 +143,6 @@ const profileLoginStatus = async () => {
           berat_badan: null,
           tinggi_badan: null,
         };
-        console.log(data);
 
         try {
           const response = await fetch(`${API_ENDPOINT.DETAIL}/${userId}`, {
@@ -187,12 +175,8 @@ const profileLoginStatus = async () => {
     const historyListPendonor = document.querySelector(
       ".history-list-pendonor"
     );
-    // const historyListPenerima = document.querySelector(
-    //   ".history-list-penerima"
-    // );
-    console.log(dataHistory);
+
     historyListPendonor.innerHTML += createProfileHistoryPendonor(dataHistory);
-    // historyListPenerima.innerHTML += createProfileHistoryPenerima(dataHistory);
   }
 
   async function showListPendonorHistory() {
@@ -204,7 +188,6 @@ const profileLoginStatus = async () => {
     historyData.forEach((item) => {
       item.detail.forEach((item) => {
         historyCardWrapper.innerHTML += historyPendonor(item);
-        console.log(item);
       });
     });
   }
@@ -232,23 +215,9 @@ const profileLoginStatus = async () => {
       const decoded = jwtDecode(token);
       const userId = decoded.id;
 
-      const response = await fetch(
-        `${API_ENDPOINT.DETAIL}/${userId}`
-        // ,{
-        //     method: "GET",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //       Authorization: `Bearer ${token}`,
-        //     },
-        //   }
-      );
+      const response = await fetch(`${API_ENDPOINT.DETAIL}/${userId}`);
       const responseJson = await response.json();
       return responseJson.data;
-      //   if (!response.ok) {
-      //     throw new Error("Failed to fetch profile");
-      //   }
-      //   const data = await response.json();
-      //   return data;
     } catch (error) {
       console.error(error);
       return null;

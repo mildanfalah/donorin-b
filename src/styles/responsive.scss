@@ -25,7 +25,6 @@ $text-color: #fff;
           .desc {
             .desc-title {
               gap: 0.25rem;
-
             }
           }
         }
@@ -44,7 +43,6 @@ $text-color: #fff;
           .desc {
             .desc-title {
               gap: 0.25rem;
-
             }
           }
         }
@@ -54,7 +52,7 @@ $text-color: #fff;
 
   .wrapper-faq {
     margin-block: 3rem;
-    
+
     .wrapper-header {
       height: 70px;
     }
@@ -104,20 +102,18 @@ $text-color: #fff;
 }
 
 @media (min-width: 1000px) {
-  
   .top-content {
-
     .top-content-wrapper {
       flex-direction: row !important;
       gap: 4rem;
       margin: 0 auto;
       width: 75%;
       max-width: 1200px;
-  
+
       .top-content-wrapp-left {
         flex: 1;
       }
-  
+
       .top-content-wrapp-right {
         flex: 1;
       }
@@ -132,7 +128,8 @@ $text-color: #fff;
     flex-direction: row !important;
     gap: 3rem;
 
-    .profile-form-input, .profile-form-choose {
+    .profile-form-input,
+    .profile-form-choose {
       flex: 1;
     }
   }
@@ -192,7 +189,6 @@ $text-color: #fff;
               p {
                 font-size: 1.2rem;
               }
-
             }
           }
         }
@@ -235,7 +231,6 @@ $text-color: #fff;
               p {
                 font-size: 1.2rem;
               }
-
             }
           }
         }
@@ -333,6 +328,22 @@ $text-color: #fff;
   .profile-container {
     max-width: 1200px;
     width: 75% !important;
+
+    .profile-info {
+      .save-button {
+        margin: 0;
+      }
+    }
+  }
+
+  .register-wrapp {
+    width: 50%;
+    margin: 20px 150px 20px auto;
+  }
+
+  .login-wrapp {
+    width: 35%;
+    margin: 0 20% 0 auto !important;
   }
 
   footer {
