@@ -1,6 +1,6 @@
 const CONFIG = {
   KEY: "YOUR API_KEY",
-  BASE_URL: "http://localhost:4000/",
+  BASE_URL: "https://api.donorin.my.id/",
   BASE_IMAGE_URL: "./images/AB+.png",
   DEFAULT_LANGUAGE: "en-us",
   DATABASE_NAME: "donorin",

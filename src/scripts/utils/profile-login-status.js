@@ -269,6 +269,7 @@ const profileLoginStatus = async () => {
       const data = await getProfile();
       const dataHistory = await getHistory();
       const dataSubmitted = await getSubmittedHistory();
+      console.log(dataHistory);
       console.log(dataSubmitted);
       if (data) {
         showProfile(data);
