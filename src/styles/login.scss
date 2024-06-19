@@ -3,6 +3,10 @@ $secondary-color: #242424;
 $text-color: #fff;
 
 .login-wrapp {
+
+  img {
+    display: none;
+  }
   margin: 0 !important;
 
   .login-form-container {

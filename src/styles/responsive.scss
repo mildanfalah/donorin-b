@@ -339,13 +339,47 @@ $text-color: #fff;
   }
 
   .register-wrapp {
-    width: 50%;
-    margin: 20px 150px 20px auto;
+    display: flex;
+    overflow: hidden;
+    height: 100% !important;
+    width: 100%;
+    // margin: 0px 150px 20px auto;
+    // background-color: orange;
+
+    img {
+      display: block !important;
+      height: 120%;
+      width: auto;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: -9;
+    }
+
+    .login-form-container {
+      width: 50%;
+      position: relative;
+      top: 50%;
+      right: 10%;
+      transform: translate(50%, -50%) !important;
+      margin-bottom: 100px;
+    }
   }
 
   .login-wrapp {
+    height: 100%;
     width: 35%;
     margin: 0 20% 0 auto !important;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -99;
+    }
   }
 
   footer {

@@ -38,17 +38,17 @@ const About = {
                 <div class="card card-left">
                   <div id="card-content">
 
-                    <img src="./images/avatar-3.jpg">
+                    <img src="./images/profile_andre.png">
 
                     <div class="desc">
                       <div class="desc-sosmed">
                         <a href="https://github.com/andreasalex27" target="_blank">
                           <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/yudi-ari-nugroho-439727178/" target="_blank">
+                        <a href="https://www.linkedin.com/in/andreas-alex27/" target="_blank">
                           <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="https://www.instagram.com/yudi_nug/" target="_blank">
+                        <a href="https://www.instagram.com/albertmuntheee/" target="_blank">
                           <i class="fa-brands fa-instagram"></i>
                         </a>
                       </div>

@@ -6,6 +6,7 @@ import "../styles/profile.scss";
 import "../styles/donorin.scss";
 import "../styles/login.scss";
 import "../styles/responsive.scss";
+import "../styles/register.scss"
 import App from "./views/app";
 
 const app = new App({
