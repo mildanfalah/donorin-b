@@ -85,10 +85,6 @@ const submitButtonFunction = async () => {
       return;
     }
 
-    console.log(userProfile);
-    console.log(submitSelectedUserIdTrx);
-    console.log(submitSelectedUserNameTrx);
-
     const findRequest = request.find((r) => {
       if (
         r.id_user_pemohon === userProfile[0].id &&
@@ -103,7 +99,7 @@ const submitButtonFunction = async () => {
     });
 
     const data = {
-      id_trx: findRequest.id,
+      id_trx: findRequest?.id || "unknown",
       id_user_pendonor: submitSelectedUserIdTrx,
       nama_pendonor: submitSelectedUserNameTrx,
       tanggal_kontribusi: new Date().toISOString().slice(0, 10),
@@ -132,7 +128,7 @@ const submitButtonFunction = async () => {
         window.location.reload();
       } else {
         console.log("failed request");
-        alert(result.message);
+        alert("Anda belum melakukan permintaan");
       }
     } catch (error) {
       alert("request failed");

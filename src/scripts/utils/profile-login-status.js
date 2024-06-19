@@ -28,6 +28,7 @@ const profileLoginStatus = async () => {
   logoutButton.addEventListener("click", logoutUser);
 
   const showProfile = (data) => {
+    console.log(data);
     profile.classList.remove("hidden");
     noLogin.classList.add("hidden");
     loginButton.classList.add("hidden");
@@ -115,6 +116,7 @@ const profileLoginStatus = async () => {
 
     editButton.addEventListener("click", async () => {
       const editForm = document.querySelector("#profile-form");
+      const editSaveButton = document.querySelector(".profile-form-choose");
       const editInputs = editForm.querySelectorAll("input");
       editInputs.forEach((input) => {
         input.removeAttribute("readonly");
@@ -124,14 +126,16 @@ const profileLoginStatus = async () => {
       const saveButton = document.createElement("button");
       saveButton.textContent = "Save";
       saveButton.classList.add("save-button");
-      editForm.appendChild(saveButton);
+      editSaveButton.appendChild(saveButton);
 
       saveButton.addEventListener("click", async (event) => {
         event.preventDefault();
 
         const token = localStorage.getItem("jwtToken");
         const decoded = jwtDecode(token);
+        console.log(decoded);
         const userId = decoded.id;
+        console.log(userId);
         const formData = new FormData(editForm);
         const data = {
           kontak_telp: formData.get("kontak"),
@@ -233,6 +237,7 @@ const profileLoginStatus = async () => {
 
       const response = await fetch(`${API_ENDPOINT.HISTORY2}/${userId}`);
       const responseJson = await response.json();
+      console.log(responseJson);
       if (!response.ok) {
         throw new Error(response.message || "Failed to fetch profile");
       }
@@ -264,9 +269,14 @@ const profileLoginStatus = async () => {
       const data = await getProfile();
       const dataHistory = await getHistory();
       const dataSubmitted = await getSubmittedHistory();
+      console.log(dataSubmitted);
       if (data) {
         showProfile(data);
-        if (dataHistory) {
+        if (dataHistory && dataSubmitted) {
+          showHistory(dataHistory);
+          showListPendonorHistory(dataHistory);
+          historySubmittedData(dataSubmitted);
+        } else if (dataHistory) {
           showHistory(dataHistory);
           showListPendonorHistory(dataHistory);
         } else if (dataSubmitted) {

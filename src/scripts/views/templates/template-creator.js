@@ -47,7 +47,7 @@ const createUserTransactionTemplate = (user) => `
   user.id
 }" alt="${user.nama_pemohon}"/>
             <div class="user-card-content">
-                <h2 class="user-card-name">${user.nama_pemohon}</h2>
+                <h2 class="user-card-name">${user.nama_penerima}</h2>
                 <div class="user-card-info-2">
                     <p class="user-card-date"><i class="fa-solid fa-calendar" style="color: #cd2c4e;"></i> ${new Date(
                       user.tanggal_dibutuhkan
