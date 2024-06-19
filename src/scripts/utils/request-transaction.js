@@ -49,8 +49,6 @@ const requestTransaction = () => {
       return;
     }
 
-    console.log(userProfile);
-
     const data = {
       id_user_pemohon: userProfile[0].id,
       nama_pemohon: userProfile[0].nama,
@@ -64,8 +62,6 @@ const requestTransaction = () => {
       nik_penerima: userProfile[0].nik,
     };
 
-    console.log(data);
-
     try {
       const response = await fetch(`${API_ENDPOINT.TRANSACTIONS}`, {
         method: "POST",
@@ -77,7 +73,6 @@ const requestTransaction = () => {
       });
 
       const result = await response.json();
-      console.log(result);
       if (response.ok) {
         console.log("request-success");
         alert("request success");

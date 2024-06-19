@@ -90,7 +90,6 @@ const submitButtonFunction = async () => {
         r.id_user_pemohon === userProfile[0].id &&
         r.tanggal_dibutuhkan > new Date().toISOString().slice(0, 10)
       ) {
-        console.log(r.id);
         return r;
       } else {
         console.log("no request found");
@@ -105,8 +104,6 @@ const submitButtonFunction = async () => {
       tanggal_kontribusi: new Date().toISOString().slice(0, 10),
     };
 
-    console.log(data);
-
     try {
       const response = await fetch(`${API_ENDPOINT.TRANSACTIONSDETAIL}`, {
         method: "POST",
@@ -118,7 +115,6 @@ const submitButtonFunction = async () => {
       });
 
       const result = await response.json();
-      console.log(result);
       if (response.ok) {
         console.log("request-success");
         alert("request success");

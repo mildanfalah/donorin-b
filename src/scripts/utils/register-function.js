@@ -39,7 +39,6 @@ const registerFunction = () => {
       });
 
       const result = await response.json();
-      console.log(result);
       if (response.ok) {
         console.log("register-success");
         window.location.href = "#/login";
