@@ -4,7 +4,7 @@ const API_ENDPOINT = {
   HOME: `${CONFIG.BASE_URL}home`,
   DONORIN: `${CONFIG.BASE_URL}users`,
   LOGIN: `${CONFIG.BASE_URL}login`,
-  TRANSACTIONS: `${CONFIG.BASE_URL}transactions`,
+  TRANSACTIONS: `${CONFIG.BASE_URL}users`,
   TRANSACTIONSDETAIL: `${CONFIG.BASE_URL}transaction-details`,
   PROFILE: `${CONFIG.BASE_URL}profile`,
   HISTORY: `${CONFIG.BASE_URL}history-contributor`,

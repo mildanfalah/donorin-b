@@ -120,10 +120,12 @@ const Donorin = {
 
   async afterRender() {
     const users = await DonorinDbSource.donorinData();
+    console.log(users);
     const userTransactions = await DonorinDbSource.transactionData();
     const usersContainer = document.querySelector(".donorin-list");
 
     users.forEach((user) => {
+      console.log(user.firstName);
       usersContainer.innerHTML += createUserItemTemplate(user);
     });
     userTransactions.forEach((user) => {

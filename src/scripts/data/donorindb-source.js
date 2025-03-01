@@ -4,7 +4,7 @@ class DonorinDbSource {
   static async donorinData() {
     const response = await fetch(API_ENDPOINT.DONORIN);
     const responseJson = await response.json();
-    return responseJson.data;
+    return responseJson.users;
   }
 
   static async donorinDetail(id) {
@@ -15,7 +15,7 @@ class DonorinDbSource {
   static async transactionData() {
     const response = await fetch(API_ENDPOINT.TRANSACTIONS);
     const responseJson = await response.json();
-    return responseJson.data;
+    return responseJson.users;
   }
 
   static async transactionDetail(id) {

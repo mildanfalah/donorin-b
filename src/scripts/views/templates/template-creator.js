@@ -17,10 +17,10 @@ const createUserItemTemplate = (user) => `
   user.id
 }" alt="${user.nama}"/>
             <div class="user-card-content">
-                <h2 class="user-card-name">${user.nama}</h2>
+                <h2 class="user-card-name">${user.firstName}</h2>
                 <div class="user-card-info">
                     <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
-                      user.gol_darah
+                      user.bloodGroup
                     }</p>
                     <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
                       user.lokasi
@@ -47,25 +47,25 @@ const createUserTransactionTemplate = (user) => `
   user.id
 }" alt="${user.nama_pemohon}"/>
             <div class="user-card-content">
-                <h2 class="user-card-name">${user.nama_penerima}</h2>
+                <h2 class="user-card-name">${user.firstName}</h2>
                 <div class="user-card-info-2">
                     <p class="user-card-date"><i class="fa-solid fa-calendar" style="color: #cd2c4e;"></i> ${new Date(
-                      user.tanggal_dibutuhkan
+                      user.birthDate
                     ).toLocaleDateString("en-us", {
                       year: "numeric",
                       month: "short",
                       day: "numeric",
                     })}</p>
                     <p class="user-card-address"><i class="fa-solid fa-location-dot" style="color: #cd2c4e;"></i> ${
-                      user.lokasi
+                      user.address.state
                     }</p>
                 </div>
                 <div class="user-card-info">
                     <p class="user-card-blood"><i class="fa-solid fa-droplet" style="color: #cd2c4e;"></i> ${
-                      user.gol_darah_dibutuhkan
+                      user.bloodGroup
                     }</p>
                     <p class="user-card-blood-needed"><i class="fa-solid fa-syringe" style="color: #cd2c4e;"></i> ${
-                      user.jumlah_mililiter
+                      user.address.postalCode
                     }ml</p>
                 </div>
                 <button id="contributeButton" data-user-id-trx="${
